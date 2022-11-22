@@ -3,7 +3,7 @@ import { api } from '$discord/api'
 import type { RequestHandler } from '@sveltejs/kit'
 import type { APIGuildMember } from 'discord-api-types/v10'
 
-const guildId = import.meta.env.VITE_DISCORD_GUILD_ID
+const guildId = import.meta.env.VITE_DISCORD_GUILD_ID_TOKEN
 
 async function getDiscordUsername(userId: string) {
   try {

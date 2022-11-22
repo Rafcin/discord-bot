@@ -87,10 +87,10 @@ function createFakeQuestions(
         guild: {
           connectOrCreate: {
             where: {
-              id: import.meta.env.VITE_DISCORD_GUILD_ID,
+              id: import.meta.env.VITE_DISCORD_GUILD_ID_TOKEN,
             },
             create: {
-              id: import.meta.env.VITE_DISCORD_GUILD_ID,
+              id: import.meta.env.VITE_DISCORD_GUILD_ID_TOKEN,
             },
           },
         },

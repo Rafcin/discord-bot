@@ -4,7 +4,7 @@ import type { PageServerLoad } from './$types'
 export const load: PageServerLoad = async () => {
   const questions = await prisma.question.findMany({
     where: {
-      guildId: import.meta.env.VITE_DISCORD_GUILD_ID,
+      guildId: import.meta.env.VITE_DISCORD_GUILD_ID_TOKEN,
     },
     select: {
       id: true,

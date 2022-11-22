@@ -9,6 +9,7 @@ import {
   type StartThreadOptions,
   type ThreadChannel,
   type Guild,
+  User,
 } from 'discord.js'
 import { prisma } from '$lib/db'
 import {
@@ -20,6 +21,7 @@ import { PREFIXES } from './commands/thread'
 import { isHelpChannel, isThreadWithinHelpChannel } from './support'
 import { integrations } from '$lib/features/index'
 import { FEATURE_TYPES } from '$lib/constants'
+import { Configuration, OpenAIApi } from 'openai'
 
 export const client = new Client({
   intents: [
@@ -29,6 +31,11 @@ export const client = new Client({
     GatewayIntentBits.MessageContent,
   ],
 })
+
+const configuration = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+})
+const openai = new OpenAIApi(configuration)
 
 const initGuild = async (guild: Guild) => {
   return prisma.guild.upsert({
@@ -171,13 +178,76 @@ client.on(Events.MessageCreate, async (message: Message) => {
     }
 
     // optionally send a message to the thread
-    const embed = new EmbedBuilder()
-    embed.setColor('#ff9900')
+    const infoEmbed = new EmbedBuilder()
+    infoEmbed.setColor('#ff9900')
     // TODO: add more info on /thread command
-    embed.setDescription(
+    infoEmbed.setDescription(
       "Hey there! :wave: we've created a thread for you!\n\nUse `/thread rename` to change the title.\n\nUse `/thread solved` to mark this thread as solved."
     )
-    thread.send({ embeds: [embed] })
+    thread.send({ embeds: [infoEmbed] })
+
+    /**
+     * When the user asks a question, generate a response using GPT-3 and then track if the user reacts positively or negatively to the response by using
+     * the thumbs up and thumbs down reactions.
+     */
+
+    try {
+      const recommendationEmojis = ['👍', '👎'] //the emojis to react
+      const filter = (reaction: { emoji: { name: string } }, user: User) => {
+        return (
+          ['👍', '👎'].includes(reaction.emoji.name) &&
+          user.id === message.author.id
+        )
+      }
+      const response = await openai.createCompletion({
+        model: 'text-davinci-002',
+        prompt: `Question: ${message.content}; ?\nAnswer:`,
+        temperature: 0.723631,
+        max_tokens: 256,
+        top_p: 1,
+        frequency_penalty: 0.03,
+        presence_penalty: 0.03,
+        stop: ['Answer:'],
+      })
+      const recommendationEmbed = new EmbedBuilder()
+      recommendationEmbed.setColor('#5865f2')
+      recommendationEmbed.setDescription(
+        `:man_mage::magic_wand: Here is a quick recommendation we think will solve your issue:\n ${response.data.choices[0].text} \n Let us know if this works!`
+      )
+      //Take the array of reactions and react to the thread.
+      thread
+        .send({ embeds: [recommendationEmbed] })
+        .then(async function (message: Message) {
+          for (const emoji of recommendationEmojis) {
+            await message.react(emoji)
+          }
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+          for (const _reaction of recommendationEmojis) {
+            await message
+              // eslint-disable-next-line @typescript-eslint/prefer-ts-expect-error, @typescript-eslint/ban-ts-comment
+              //@ts-ignore
+              .awaitReactions({ filter, max: 1, time: 60000 })
+              .then((collected) => {
+                const reaction = collected.first()
+                if (reaction && reaction.emoji.name === '👍') {
+                  message.reply(
+                    "Awesome! Since this solved your issue let's go ahead and close this thread!"
+                  )
+                } else if (reaction && reaction.emoji.name === '👎') {
+                  message.reply(
+                    "I'm sorry we could not provider a better answer."
+                  )
+                }
+              })
+              .catch((collected) => {
+                console.error('Collection error', collected)
+              })
+          }
+        })
+      //Track the reactions
+    } catch (error) {
+      console.error('Error suggesting solution', error)
+    }
   }
 
   // capture thread updates in public "help" channels
@@ -197,6 +267,8 @@ client.on(Events.MessageCreate, async (message: Message) => {
           threadMetaUpdatedAt: message.createdAt as Date,
         },
         create: {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment, @typescript-eslint/prefer-ts-expect-error
+          //@ts-ignore
           ownerId: (
             await message.channel.fetchStarterMessage()
           ).author.id as string,

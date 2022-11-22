@@ -36,7 +36,7 @@ export async function seed() {
   const STAFF_ROLE = '1001228846768590934'
   const CONTRIBUTOR_ROLE = '1001228846768590931'
   await prisma.configuration.upsert({
-    where: { id: import.meta.env.VITE_DISCORD_GUILD_ID },
+    where: { id: import.meta.env.VITE_DISCORD_GUILD_ID_TOKEN },
     update: {},
     create: {
       name: 'hey-amplify-e2e',
@@ -75,8 +75,8 @@ export async function seed() {
       },
       guild: {
         connectOrCreate: {
-          where: { id: import.meta.env.VITE_DISCORD_GUILD_ID },
-          create: { id: import.meta.env.VITE_DISCORD_GUILD_ID },
+          where: { id: import.meta.env.VITE_DISCORD_GUILD_ID_TOKEN },
+          create: { id: import.meta.env.VITE_DISCORD_GUILD_ID_TOKEN },
         },
       },
     },

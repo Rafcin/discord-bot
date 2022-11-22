@@ -32,7 +32,7 @@ RUN pnpm install --frozen-lockfile
 # expose arguments for VITE environment variables
 ARG VITE_HOST=http://localhost:3000
 ARG VITE_NEXTAUTH_URL=http://localhost:3000
-ARG VITE_DISCORD_GUILD_ID=976838371383083068
+ARG VITE_DISCORD_GUILD_ID_TOKEN=976838371383083068
 ARG DATABASE_URL="file:/data/sqlite.db"
 # expose necessary env vars
 ENV PORT=3000

@@ -45,7 +45,7 @@ beforeAll(async () => {
 
   config = await prisma.configuration.findUnique({
     where: {
-      id: import.meta.env.VITE_DISCORD_GUILD_ID,
+      id: import.meta.env.VITE_DISCORD_GUILD_ID_TOKEN,
     },
     select: {
       id: true,

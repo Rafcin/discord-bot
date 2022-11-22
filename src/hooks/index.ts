@@ -49,7 +49,7 @@ const handleSessionUser: Handle = async ({ event, resolve }) => {
     savedGuild = parsed['hey-amplify.guild']
   }
 
-  let activeGuild = import.meta.env.VITE_DISCORD_GUILD_ID
+  let activeGuild = import.meta.env.VITE_DISCORD_GUILD_ID_TOKEN
   if (savedGuild) activeGuild = savedGuild
 
   if (session?.user) {

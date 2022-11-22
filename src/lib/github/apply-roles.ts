@@ -98,7 +98,7 @@ export async function applyRoles(
   userId: string,
   ghUserId: string,
   accessToken: string,
-  guildId: string = import.meta.env.VITE_DISCORD_GUILD_ID
+  guildId: string = import.meta.env.VITE_DISCORD_GUILD_ID_TOKEN
 ) {
   let discUserId
   let staffResponse = true
@@ -217,7 +217,7 @@ if (import.meta.vitest) {
 
       const config = await prisma.configuration.findUnique({
         where: {
-          id: import.meta.env.VITE_DISCORD_GUILD_ID,
+          id: import.meta.env.VITE_DISCORD_GUILD_ID_TOKEN,
         },
         select: {
           id: true,
