@@ -13,8 +13,11 @@
   },
   "types": "build/index.d.ts",
   "scripts": {
+    "[--- Build ---]": "",
     "dev": "tsup --watch",
-    "build": "tsup"
+    "build": "tsup",
+    "[--- Clean ---]": "",
+    "clean": "rimraf build"
   },
   "dependencies": {
     "@discordjs/builders": "^1.4.0",

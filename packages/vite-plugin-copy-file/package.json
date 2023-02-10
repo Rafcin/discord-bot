@@ -10,7 +10,10 @@
   },
   "types": "./build/vite-plugin-copy-file.d.ts",
   "scripts": {
-    "build": "vite build"
+    "[--- Build ---]": "",
+    "build": "vite build",
+    "[--- Clean ---]": "",
+    "clean": "rimraf build"
   },
   "dependencies": {
     "express": "^4.18.1"

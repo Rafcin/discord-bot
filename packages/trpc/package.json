@@ -1,0 +1,37 @@
+{
+  "name": "@hey-amplify/prisma",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "exports": {
+    ".": {
+      "import": "./index.js"
+    },
+    "./package.json": "./package.json",
+    "./schema.prisma": "./schema.prisma"
+  },
+  "scripts": {
+    "[--- Build ---]": "",
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "[--- Clean ---]": "",
+    "clean": "rimraf build"
+  },
+  "devDependencies": {
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@next-auth/prisma-adapter": "^1.0.5",
+    "@trpc/client": "^10.10.0",
+    "@trpc/next": "^10.10.0",
+    "@trpc/server": "^10.10.0",
+    "dotenv": "^16.0.3",
+    "next-auth": "^4.19.2",
+    "superjson": "1.12.2",
+    "zod": "^3.20.2",
+    "zod-prisma-types": "^2.0.8",
+    "next": "^13.1.6",
+    "@hey-amplify/prisma": "*"
+  }
+}

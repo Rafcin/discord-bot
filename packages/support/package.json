@@ -14,18 +14,18 @@
     "./package.json": "./package.json"
   },
   "scripts": {
+    "[--- Build ---]": "",
     "build": "tsc",
     "dev": "pnpm build --watch",
-    "clean": "rimraf build",
-    "prepublishOnly": "pnpm build"
+    "prepublishOnly": "pnpm build",
+    "[--- Clean ---]": "",
+    "clean": "rimraf build"
   },
   "dependencies": {},
   "devDependencies": {
     "@aws-sdk/client-ssm": "^3.142.0",
     "@types/node": "^18.6.4",
     "fast-glob": "^3.2.11",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.7.4",
     "vite": "^3.0.4",
     "vitest": "^0.20.3"
   }

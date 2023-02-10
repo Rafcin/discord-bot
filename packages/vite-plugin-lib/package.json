@@ -10,7 +10,10 @@
   },
   "types": "./build/vite-plugin-lib.d.ts",
   "scripts": {
-    "build": "vite build"
+    "[--- Build ---]": "",
+    "build": "vite build",
+    "[--- Clean ---]": "",
+    "clean": "rimraf build"
   },
   "dependencies": {
     "fast-glob": "^3.2.11",
