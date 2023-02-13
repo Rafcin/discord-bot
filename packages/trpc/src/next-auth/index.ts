@@ -4,8 +4,8 @@ import DiscordProvider from 'next-auth/providers/discord'
 
 // Prisma adapter for NextAuth =>
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
-import { prisma } from '@/prisma'
-import { server_env } from '@/env/server'
+import { Prisma } from '@hey-amplify/prisma-client'
+import { server_env } from '../env/server'
 
 export const nextAuthOptions: NextAuthOptions = {
   providers: [
@@ -38,14 +38,15 @@ export const nextAuthOptions: NextAuthOptions = {
   ],
   debug: true,
   secret: server_env.NEXTAUTH_SECRET || '',
-  adapter: PrismaAdapter(prisma),
+  adapter: PrismaAdapter(Prisma),
   callbacks: {
     session: ({ session, user }) => ({
       ...session,
       user: {
         ...session.user,
         id: user.id,
-        //@ts-ignore
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-expect-error
         username: user.username,
       },
     }),

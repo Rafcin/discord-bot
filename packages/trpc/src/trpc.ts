@@ -1,5 +1,5 @@
 import { TRPCError } from '@trpc/server'
-import { t } from '@/trpc/routers/helpers/createRouter'
+import { t } from './generated/routers/helpers/createRouter'
 
 /**
  * Reusable middleware to ensure

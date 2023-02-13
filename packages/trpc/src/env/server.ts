@@ -18,6 +18,7 @@ if (_serverEnv.success === false) {
 /**
  * Validate that server-side environment variables are not exposed to the client.
  */
+// eslint-disable-next-line prefer-const
 for (let key of Object.keys(_serverEnv.data)) {
   if (key.startsWith('NEXT_PUBLIC_')) {
     console.warn(
