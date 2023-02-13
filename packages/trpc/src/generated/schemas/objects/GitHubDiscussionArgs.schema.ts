@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { GitHubDiscussionSelectObjectSchema } from './GitHubDiscussionSelect.schema'
 import { GitHubDiscussionIncludeObjectSchema } from './GitHubDiscussionInclude.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.GitHubDiscussionArgs> = z
   .object({

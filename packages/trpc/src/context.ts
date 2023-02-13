@@ -1,5 +1,5 @@
 import { Session } from 'next-auth'
-import { prisma } from '@hey-amplify/prisma'
+import { prisma } from '@hey-amplify/prisma-client'
 import { inferAsyncReturnType, router, TRPCError } from '@trpc/server'
 import { CreateNextContextOptions } from '@trpc/server/adapters/next'
 

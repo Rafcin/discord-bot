@@ -3,13 +3,12 @@ import { FeatureInputsCreateWithoutFeatureInputObjectSchema } from './FeatureInp
 import { FeatureInputsUncheckedCreateWithoutFeatureInputObjectSchema } from './FeatureInputsUncheckedCreateWithoutFeatureInput.schema'
 import { FeatureInputsCreateOrConnectWithoutFeatureInputObjectSchema } from './FeatureInputsCreateOrConnectWithoutFeatureInput.schema'
 import { FeatureInputsUpsertWithWhereUniqueWithoutFeatureInputObjectSchema } from './FeatureInputsUpsertWithWhereUniqueWithoutFeatureInput.schema'
-import { FeatureInputsCreateManyFeatureInputEnvelopeObjectSchema } from './FeatureInputsCreateManyFeatureInputEnvelope.schema'
 import { FeatureInputsWhereUniqueInputObjectSchema } from './FeatureInputsWhereUniqueInput.schema'
 import { FeatureInputsUpdateWithWhereUniqueWithoutFeatureInputObjectSchema } from './FeatureInputsUpdateWithWhereUniqueWithoutFeatureInput.schema'
 import { FeatureInputsUpdateManyWithWhereWithoutFeatureInputObjectSchema } from './FeatureInputsUpdateManyWithWhereWithoutFeatureInput.schema'
 import { FeatureInputsScalarWhereInputObjectSchema } from './FeatureInputsScalarWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.FeatureInputsUncheckedUpdateManyWithoutFeatureNestedInput> =
   z
@@ -55,9 +54,6 @@ const Schema: z.ZodType<Prisma.FeatureInputsUncheckedUpdateManyWithoutFeatureNes
             )
             .array(),
         ])
-        .optional(),
-      createMany: z
-        .lazy(() => FeatureInputsCreateManyFeatureInputEnvelopeObjectSchema)
         .optional(),
       set: z
         .union([

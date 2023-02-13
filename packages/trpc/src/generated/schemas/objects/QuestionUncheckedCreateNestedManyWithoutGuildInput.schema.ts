@@ -2,10 +2,9 @@ import { z } from 'zod'
 import { QuestionCreateWithoutGuildInputObjectSchema } from './QuestionCreateWithoutGuildInput.schema'
 import { QuestionUncheckedCreateWithoutGuildInputObjectSchema } from './QuestionUncheckedCreateWithoutGuildInput.schema'
 import { QuestionCreateOrConnectWithoutGuildInputObjectSchema } from './QuestionCreateOrConnectWithoutGuildInput.schema'
-import { QuestionCreateManyGuildInputEnvelopeObjectSchema } from './QuestionCreateManyGuildInputEnvelope.schema'
 import { QuestionWhereUniqueInputObjectSchema } from './QuestionWhereUniqueInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.QuestionUncheckedCreateNestedManyWithoutGuildInput> =
   z
@@ -27,9 +26,6 @@ const Schema: z.ZodType<Prisma.QuestionUncheckedCreateNestedManyWithoutGuildInpu
             .lazy(() => QuestionCreateOrConnectWithoutGuildInputObjectSchema)
             .array(),
         ])
-        .optional(),
-      createMany: z
-        .lazy(() => QuestionCreateManyGuildInputEnvelopeObjectSchema)
         .optional(),
       connect: z
         .union([

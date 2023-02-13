@@ -5,7 +5,7 @@ import { ConfigurationUncheckedUpdateOneWithoutGuildNestedInputObjectSchema } fr
 import { QuestionUncheckedUpdateManyWithoutGuildNestedInputObjectSchema } from './QuestionUncheckedUpdateManyWithoutGuildNestedInput.schema'
 import { EventScheduleUncheckedUpdateManyWithoutGuildNestedInputObjectSchema } from './EventScheduleUncheckedUpdateManyWithoutGuildNestedInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.GuildUncheckedUpdateInput> = z
   .object({

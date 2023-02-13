@@ -4,7 +4,7 @@ import { AccessLevelOrderByWithRelationInputObjectSchema } from './AccessLevelOr
 import { ConfigurationOrderByWithRelationInputObjectSchema } from './ConfigurationOrderByWithRelationInput.schema'
 import { DiscordRoleOrderByWithRelationInputObjectSchema } from './DiscordRoleOrderByWithRelationInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccessLevelRoleOrderByWithRelationInput> = z
   .object({

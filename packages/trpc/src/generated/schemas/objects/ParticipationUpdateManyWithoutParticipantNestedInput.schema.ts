@@ -3,13 +3,12 @@ import { ParticipationCreateWithoutParticipantInputObjectSchema } from './Partic
 import { ParticipationUncheckedCreateWithoutParticipantInputObjectSchema } from './ParticipationUncheckedCreateWithoutParticipantInput.schema'
 import { ParticipationCreateOrConnectWithoutParticipantInputObjectSchema } from './ParticipationCreateOrConnectWithoutParticipantInput.schema'
 import { ParticipationUpsertWithWhereUniqueWithoutParticipantInputObjectSchema } from './ParticipationUpsertWithWhereUniqueWithoutParticipantInput.schema'
-import { ParticipationCreateManyParticipantInputEnvelopeObjectSchema } from './ParticipationCreateManyParticipantInputEnvelope.schema'
 import { ParticipationWhereUniqueInputObjectSchema } from './ParticipationWhereUniqueInput.schema'
 import { ParticipationUpdateWithWhereUniqueWithoutParticipantInputObjectSchema } from './ParticipationUpdateWithWhereUniqueWithoutParticipantInput.schema'
 import { ParticipationUpdateManyWithWhereWithoutParticipantInputObjectSchema } from './ParticipationUpdateManyWithWhereWithoutParticipantInput.schema'
 import { ParticipationScalarWhereInputObjectSchema } from './ParticipationScalarWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.ParticipationUpdateManyWithoutParticipantNestedInput> =
   z
@@ -59,9 +58,6 @@ const Schema: z.ZodType<Prisma.ParticipationUpdateManyWithoutParticipantNestedIn
             )
             .array(),
         ])
-        .optional(),
-      createMany: z
-        .lazy(() => ParticipationCreateManyParticipantInputEnvelopeObjectSchema)
         .optional(),
       set: z
         .union([

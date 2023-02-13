@@ -4,7 +4,7 @@ import { AnswerUncheckedUpdateWithoutParticipationInputObjectSchema } from './An
 import { AnswerCreateWithoutParticipationInputObjectSchema } from './AnswerCreateWithoutParticipationInput.schema'
 import { AnswerUncheckedCreateWithoutParticipationInputObjectSchema } from './AnswerUncheckedCreateWithoutParticipationInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AnswerUpsertWithoutParticipationInput> = z
   .object({

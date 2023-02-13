@@ -3,7 +3,6 @@ import { QuestionFindUniqueSchema } from "../schemas/findUniqueQuestion.schema";
 import { QuestionFindFirstSchema } from "../schemas/findFirstQuestion.schema";
 import { QuestionFindManySchema } from "../schemas/findManyQuestion.schema";
 import { QuestionCreateOneSchema } from "../schemas/createOneQuestion.schema";
-import { QuestionCreateManySchema } from "../schemas/createManyQuestion.schema";
 import { QuestionDeleteOneSchema } from "../schemas/deleteOneQuestion.schema";
 import { QuestionUpdateOneSchema } from "../schemas/updateOneQuestion.schema";
 import { QuestionDeleteManySchema } from "../schemas/deleteManyQuestion.schema";
@@ -18,12 +17,6 @@ export const questionsRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateQuestion = await ctx.prisma.question.aggregate(input);
       return aggregateQuestion;
-    }),
-  createManyQuestion: publicProcedure
-    .input(QuestionCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyQuestion = await ctx.prisma.question.createMany(input);
-      return createManyQuestion;
     }),
   createOneQuestion: publicProcedure
     .input(QuestionCreateOneSchema)

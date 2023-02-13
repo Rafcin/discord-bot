@@ -4,7 +4,7 @@ import { ParticipationListRelationFilterObjectSchema } from './ParticipationList
 import { AccessLevelRoleRelationFilterObjectSchema } from './AccessLevelRoleRelationFilter.schema'
 import { AccessLevelRoleWhereInputObjectSchema } from './AccessLevelRoleWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordRoleWhereInput> = z
   .object({

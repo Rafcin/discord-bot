@@ -3,13 +3,12 @@ import { AccessLevelRoleCreateWithoutConfigurationInputObjectSchema } from './Ac
 import { AccessLevelRoleUncheckedCreateWithoutConfigurationInputObjectSchema } from './AccessLevelRoleUncheckedCreateWithoutConfigurationInput.schema'
 import { AccessLevelRoleCreateOrConnectWithoutConfigurationInputObjectSchema } from './AccessLevelRoleCreateOrConnectWithoutConfigurationInput.schema'
 import { AccessLevelRoleUpsertWithWhereUniqueWithoutConfigurationInputObjectSchema } from './AccessLevelRoleUpsertWithWhereUniqueWithoutConfigurationInput.schema'
-import { AccessLevelRoleCreateManyConfigurationInputEnvelopeObjectSchema } from './AccessLevelRoleCreateManyConfigurationInputEnvelope.schema'
 import { AccessLevelRoleWhereUniqueInputObjectSchema } from './AccessLevelRoleWhereUniqueInput.schema'
 import { AccessLevelRoleUpdateWithWhereUniqueWithoutConfigurationInputObjectSchema } from './AccessLevelRoleUpdateWithWhereUniqueWithoutConfigurationInput.schema'
 import { AccessLevelRoleUpdateManyWithWhereWithoutConfigurationInputObjectSchema } from './AccessLevelRoleUpdateManyWithWhereWithoutConfigurationInput.schema'
 import { AccessLevelRoleScalarWhereInputObjectSchema } from './AccessLevelRoleScalarWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccessLevelRoleUncheckedUpdateManyWithoutConfigurationNestedInput> =
   z
@@ -63,11 +62,6 @@ const Schema: z.ZodType<Prisma.AccessLevelRoleUncheckedUpdateManyWithoutConfigur
             )
             .array(),
         ])
-        .optional(),
-      createMany: z
-        .lazy(
-          () => AccessLevelRoleCreateManyConfigurationInputEnvelopeObjectSchema
-        )
         .optional(),
       set: z
         .union([

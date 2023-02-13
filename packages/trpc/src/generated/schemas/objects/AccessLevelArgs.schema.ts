@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { AccessLevelSelectObjectSchema } from './AccessLevelSelect.schema'
 import { AccessLevelIncludeObjectSchema } from './AccessLevelInclude.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccessLevelArgs> = z
   .object({

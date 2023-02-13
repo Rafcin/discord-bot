@@ -4,7 +4,7 @@ import { QuestionFindManySchema } from '../findManyQuestion.schema'
 import { EventScheduleFindManySchema } from '../findManyEventSchedule.schema'
 import { GuildCountOutputTypeArgsObjectSchema } from './GuildCountOutputTypeArgs.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.GuildSelect> = z
   .object({

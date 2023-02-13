@@ -4,7 +4,7 @@ import { DiscordUserCountOrderByAggregateInputObjectSchema } from './DiscordUser
 import { DiscordUserMaxOrderByAggregateInputObjectSchema } from './DiscordUserMaxOrderByAggregateInput.schema'
 import { DiscordUserMinOrderByAggregateInputObjectSchema } from './DiscordUserMinOrderByAggregateInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordUserOrderByWithAggregationInput> = z
   .object({

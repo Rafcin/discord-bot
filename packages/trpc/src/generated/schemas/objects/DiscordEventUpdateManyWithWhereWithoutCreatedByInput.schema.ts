@@ -3,7 +3,7 @@ import { DiscordEventScalarWhereInputObjectSchema } from './DiscordEventScalarWh
 import { DiscordEventUpdateManyMutationInputObjectSchema } from './DiscordEventUpdateManyMutationInput.schema'
 import { DiscordEventUncheckedUpdateManyWithoutCreatedEventsInputObjectSchema } from './DiscordEventUncheckedUpdateManyWithoutCreatedEventsInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordEventUpdateManyWithWhereWithoutCreatedByInput> =
   z

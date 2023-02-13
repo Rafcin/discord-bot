@@ -3,7 +3,6 @@ import { QuestionTagFindUniqueSchema } from "../schemas/findUniqueQuestionTag.sc
 import { QuestionTagFindFirstSchema } from "../schemas/findFirstQuestionTag.schema";
 import { QuestionTagFindManySchema } from "../schemas/findManyQuestionTag.schema";
 import { QuestionTagCreateOneSchema } from "../schemas/createOneQuestionTag.schema";
-import { QuestionTagCreateManySchema } from "../schemas/createManyQuestionTag.schema";
 import { QuestionTagDeleteOneSchema } from "../schemas/deleteOneQuestionTag.schema";
 import { QuestionTagUpdateOneSchema } from "../schemas/updateOneQuestionTag.schema";
 import { QuestionTagDeleteManySchema } from "../schemas/deleteManyQuestionTag.schema";
@@ -18,12 +17,6 @@ export const questiontagsRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateQuestionTag = await ctx.prisma.questionTag.aggregate(input);
       return aggregateQuestionTag;
-    }),
-  createManyQuestionTag: publicProcedure
-    .input(QuestionTagCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyQuestionTag = await ctx.prisma.questionTag.createMany(input);
-      return createManyQuestionTag;
     }),
   createOneQuestionTag: publicProcedure
     .input(QuestionTagCreateOneSchema)

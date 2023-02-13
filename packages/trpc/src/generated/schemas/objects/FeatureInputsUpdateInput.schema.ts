@@ -4,7 +4,7 @@ import { DateTimeFieldUpdateOperationsInputObjectSchema } from './DateTimeFieldU
 import { FeatureUpdateOneRequiredWithoutInputsNestedInputObjectSchema } from './FeatureUpdateOneRequiredWithoutInputsNestedInput.schema'
 import { BoolFieldUpdateOperationsInputObjectSchema } from './BoolFieldUpdateOperationsInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.FeatureInputsUpdateInput> = z
   .object({

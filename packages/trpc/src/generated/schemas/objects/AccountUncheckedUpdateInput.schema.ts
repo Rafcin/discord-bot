@@ -4,17 +4,11 @@ import { NullableStringFieldUpdateOperationsInputObjectSchema } from './Nullable
 import { NullableIntFieldUpdateOperationsInputObjectSchema } from './NullableIntFieldUpdateOperationsInput.schema'
 import { DiscordUserUncheckedUpdateOneWithoutAccountNestedInputObjectSchema } from './DiscordUserUncheckedUpdateOneWithoutAccountNestedInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccountUncheckedUpdateInput> = z
   .object({
     id: z
-      .union([
-        z.string(),
-        z.lazy(() => StringFieldUpdateOperationsInputObjectSchema),
-      ])
-      .optional(),
-    userId: z
       .union([
         z.string(),
         z.lazy(() => StringFieldUpdateOperationsInputObjectSchema),
@@ -59,6 +53,13 @@ const Schema: z.ZodType<Prisma.AccountUncheckedUpdateInput> = z
       ])
       .optional()
       .nullable(),
+    refresh_token_expires_in: z
+      .union([
+        z.number(),
+        z.lazy(() => NullableIntFieldUpdateOperationsInputObjectSchema),
+      ])
+      .optional()
+      .nullable(),
     token_type: z
       .union([
         z.string(),
@@ -87,7 +88,13 @@ const Schema: z.ZodType<Prisma.AccountUncheckedUpdateInput> = z
       ])
       .optional()
       .nullable(),
-    DiscordUser: z
+    userId: z
+      .union([
+        z.string(),
+        z.lazy(() => StringFieldUpdateOperationsInputObjectSchema),
+      ])
+      .optional(),
+    discordUser: z
       .lazy(
         () => DiscordUserUncheckedUpdateOneWithoutAccountNestedInputObjectSchema
       )

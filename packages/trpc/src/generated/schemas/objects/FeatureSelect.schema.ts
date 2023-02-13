@@ -4,7 +4,7 @@ import { ConfigurationFeatureFindManySchema } from '../findManyConfigurationFeat
 import { FeatureInputsFindManySchema } from '../findManyFeatureInputs.schema'
 import { FeatureCountOutputTypeArgsObjectSchema } from './FeatureCountOutputTypeArgs.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.FeatureSelect> = z
   .object({

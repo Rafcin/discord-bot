@@ -2,10 +2,9 @@ import { z } from 'zod'
 import { ConfigurationFeatureCreateWithoutFeatureInputObjectSchema } from './ConfigurationFeatureCreateWithoutFeatureInput.schema'
 import { ConfigurationFeatureUncheckedCreateWithoutFeatureInputObjectSchema } from './ConfigurationFeatureUncheckedCreateWithoutFeatureInput.schema'
 import { ConfigurationFeatureCreateOrConnectWithoutFeatureInputObjectSchema } from './ConfigurationFeatureCreateOrConnectWithoutFeatureInput.schema'
-import { ConfigurationFeatureCreateManyFeatureInputEnvelopeObjectSchema } from './ConfigurationFeatureCreateManyFeatureInputEnvelope.schema'
 import { ConfigurationFeatureWhereUniqueInputObjectSchema } from './ConfigurationFeatureWhereUniqueInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.ConfigurationFeatureUncheckedCreateNestedManyWithoutFeatureInput> =
   z
@@ -45,11 +44,6 @@ const Schema: z.ZodType<Prisma.ConfigurationFeatureUncheckedCreateNestedManyWith
             )
             .array(),
         ])
-        .optional(),
-      createMany: z
-        .lazy(
-          () => ConfigurationFeatureCreateManyFeatureInputEnvelopeObjectSchema
-        )
         .optional(),
       connect: z
         .union([

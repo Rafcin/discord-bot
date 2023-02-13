@@ -3,7 +3,6 @@ import { VerificationTokenFindUniqueSchema } from "../schemas/findUniqueVerifica
 import { VerificationTokenFindFirstSchema } from "../schemas/findFirstVerificationToken.schema";
 import { VerificationTokenFindManySchema } from "../schemas/findManyVerificationToken.schema";
 import { VerificationTokenCreateOneSchema } from "../schemas/createOneVerificationToken.schema";
-import { VerificationTokenCreateManySchema } from "../schemas/createManyVerificationToken.schema";
 import { VerificationTokenDeleteOneSchema } from "../schemas/deleteOneVerificationToken.schema";
 import { VerificationTokenUpdateOneSchema } from "../schemas/updateOneVerificationToken.schema";
 import { VerificationTokenDeleteManySchema } from "../schemas/deleteManyVerificationToken.schema";
@@ -18,12 +17,6 @@ export const verificationtokensRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateVerificationToken = await ctx.prisma.verificationToken.aggregate(input);
       return aggregateVerificationToken;
-    }),
-  createManyVerificationToken: publicProcedure
-    .input(VerificationTokenCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyVerificationToken = await ctx.prisma.verificationToken.createMany(input);
-      return createManyVerificationToken;
     }),
   createOneVerificationToken: publicProcedure
     .input(VerificationTokenCreateOneSchema)

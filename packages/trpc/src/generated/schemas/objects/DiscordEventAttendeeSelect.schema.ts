@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { DiscordEventArgsObjectSchema } from './DiscordEventArgs.schema'
 import { DiscordUserArgsObjectSchema } from './DiscordUserArgs.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordEventAttendeeSelect> = z
   .object({

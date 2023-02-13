@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { StringWithAggregatesFilterObjectSchema } from './StringWithAggregatesFilter.schema'
 import { BoolWithAggregatesFilterObjectSchema } from './BoolWithAggregatesFilter.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.ConfigurationFeatureScalarWhereWithAggregatesInput> =
   z

@@ -2,12 +2,12 @@ import { z } from 'zod'
 import { UserArgsObjectSchema } from './UserArgs.schema'
 import { DiscordUserArgsObjectSchema } from './DiscordUserArgs.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccountInclude> = z
   .object({
     user: z.union([z.boolean(), z.lazy(() => UserArgsObjectSchema)]).optional(),
-    DiscordUser: z
+    discordUser: z
       .union([z.boolean(), z.lazy(() => DiscordUserArgsObjectSchema)])
       .optional(),
   })

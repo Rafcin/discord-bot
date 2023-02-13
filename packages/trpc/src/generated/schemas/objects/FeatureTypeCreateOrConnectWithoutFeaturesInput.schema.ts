@@ -3,7 +3,7 @@ import { FeatureTypeWhereUniqueInputObjectSchema } from './FeatureTypeWhereUniqu
 import { FeatureTypeCreateWithoutFeaturesInputObjectSchema } from './FeatureTypeCreateWithoutFeaturesInput.schema'
 import { FeatureTypeUncheckedCreateWithoutFeaturesInputObjectSchema } from './FeatureTypeUncheckedCreateWithoutFeaturesInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.FeatureTypeCreateOrConnectWithoutFeaturesInput> =
   z

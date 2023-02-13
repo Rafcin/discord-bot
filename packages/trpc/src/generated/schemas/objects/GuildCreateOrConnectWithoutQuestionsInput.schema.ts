@@ -3,7 +3,7 @@ import { GuildWhereUniqueInputObjectSchema } from './GuildWhereUniqueInput.schem
 import { GuildCreateWithoutQuestionsInputObjectSchema } from './GuildCreateWithoutQuestionsInput.schema'
 import { GuildUncheckedCreateWithoutQuestionsInputObjectSchema } from './GuildUncheckedCreateWithoutQuestionsInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.GuildCreateOrConnectWithoutQuestionsInput> = z
   .object({

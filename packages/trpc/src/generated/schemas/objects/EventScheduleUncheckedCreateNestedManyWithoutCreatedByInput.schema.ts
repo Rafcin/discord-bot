@@ -2,10 +2,9 @@ import { z } from 'zod'
 import { EventScheduleCreateWithoutCreatedByInputObjectSchema } from './EventScheduleCreateWithoutCreatedByInput.schema'
 import { EventScheduleUncheckedCreateWithoutCreatedByInputObjectSchema } from './EventScheduleUncheckedCreateWithoutCreatedByInput.schema'
 import { EventScheduleCreateOrConnectWithoutCreatedByInputObjectSchema } from './EventScheduleCreateOrConnectWithoutCreatedByInput.schema'
-import { EventScheduleCreateManyCreatedByInputEnvelopeObjectSchema } from './EventScheduleCreateManyCreatedByInputEnvelope.schema'
 import { EventScheduleWhereUniqueInputObjectSchema } from './EventScheduleWhereUniqueInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.EventScheduleUncheckedCreateNestedManyWithoutCreatedByInput> =
   z
@@ -39,9 +38,6 @@ const Schema: z.ZodType<Prisma.EventScheduleUncheckedCreateNestedManyWithoutCrea
             )
             .array(),
         ])
-        .optional(),
-      createMany: z
-        .lazy(() => EventScheduleCreateManyCreatedByInputEnvelopeObjectSchema)
         .optional(),
       connect: z
         .union([

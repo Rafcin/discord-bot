@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { ParticipationUncheckedCreateNestedManyWithoutParticipantRolesInputObjectSchema } from './ParticipationUncheckedCreateNestedManyWithoutParticipantRolesInput.schema'
 import { AccessLevelRoleUncheckedCreateNestedOneWithoutDiscordRoleInputObjectSchema } from './AccessLevelRoleUncheckedCreateNestedOneWithoutDiscordRoleInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordRoleUncheckedCreateInput> = z
   .object({

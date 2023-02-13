@@ -5,7 +5,7 @@ import { DiscordUserUpdateOneRequiredWithoutAnswersNestedInputObjectSchema } fro
 import { NullableStringFieldUpdateOperationsInputObjectSchema } from './NullableStringFieldUpdateOperationsInput.schema'
 import { ParticipationUpdateOneRequiredWithoutAnswerNestedInputObjectSchema } from './ParticipationUpdateOneRequiredWithoutAnswerNestedInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AnswerUpdateWithoutQuestionInput> = z
   .object({

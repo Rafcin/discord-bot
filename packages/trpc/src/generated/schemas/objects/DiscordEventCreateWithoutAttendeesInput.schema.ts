@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { DiscordUserCreateNestedOneWithoutCreatedEventsInputObjectSchema } from './DiscordUserCreateNestedOneWithoutCreatedEventsInput.schema'
 import { EventScheduleCreateNestedOneWithoutEventInputObjectSchema } from './EventScheduleCreateNestedOneWithoutEventInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordEventCreateWithoutAttendeesInput> = z
   .object({

@@ -3,13 +3,12 @@ import { QuestionCreateWithoutTagsInputObjectSchema } from './QuestionCreateWith
 import { QuestionUncheckedCreateWithoutTagsInputObjectSchema } from './QuestionUncheckedCreateWithoutTagsInput.schema'
 import { QuestionCreateOrConnectWithoutTagsInputObjectSchema } from './QuestionCreateOrConnectWithoutTagsInput.schema'
 import { QuestionUpsertWithWhereUniqueWithoutTagsInputObjectSchema } from './QuestionUpsertWithWhereUniqueWithoutTagsInput.schema'
-import { QuestionCreateManyTagsInputEnvelopeObjectSchema } from './QuestionCreateManyTagsInputEnvelope.schema'
 import { QuestionWhereUniqueInputObjectSchema } from './QuestionWhereUniqueInput.schema'
 import { QuestionUpdateWithWhereUniqueWithoutTagsInputObjectSchema } from './QuestionUpdateWithWhereUniqueWithoutTagsInput.schema'
 import { QuestionUpdateManyWithWhereWithoutTagsInputObjectSchema } from './QuestionUpdateManyWithWhereWithoutTagsInput.schema'
 import { QuestionScalarWhereInputObjectSchema } from './QuestionScalarWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.QuestionUpdateManyWithoutTagsNestedInput> = z
   .object({
@@ -38,9 +37,6 @@ const Schema: z.ZodType<Prisma.QuestionUpdateManyWithoutTagsNestedInput> = z
           .lazy(() => QuestionUpsertWithWhereUniqueWithoutTagsInputObjectSchema)
           .array(),
       ])
-      .optional(),
-    createMany: z
-      .lazy(() => QuestionCreateManyTagsInputEnvelopeObjectSchema)
       .optional(),
     set: z
       .union([

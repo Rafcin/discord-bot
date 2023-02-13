@@ -3,7 +3,7 @@ import { ParticipationWhereUniqueInputObjectSchema } from './ParticipationWhereU
 import { ParticipationUpdateWithoutQuestionInputObjectSchema } from './ParticipationUpdateWithoutQuestionInput.schema'
 import { ParticipationUncheckedUpdateWithoutQuestionInputObjectSchema } from './ParticipationUncheckedUpdateWithoutQuestionInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.ParticipationUpdateWithWhereUniqueWithoutQuestionInput> =
   z

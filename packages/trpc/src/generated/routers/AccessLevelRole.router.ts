@@ -3,7 +3,6 @@ import { AccessLevelRoleFindUniqueSchema } from "../schemas/findUniqueAccessLeve
 import { AccessLevelRoleFindFirstSchema } from "../schemas/findFirstAccessLevelRole.schema";
 import { AccessLevelRoleFindManySchema } from "../schemas/findManyAccessLevelRole.schema";
 import { AccessLevelRoleCreateOneSchema } from "../schemas/createOneAccessLevelRole.schema";
-import { AccessLevelRoleCreateManySchema } from "../schemas/createManyAccessLevelRole.schema";
 import { AccessLevelRoleDeleteOneSchema } from "../schemas/deleteOneAccessLevelRole.schema";
 import { AccessLevelRoleUpdateOneSchema } from "../schemas/updateOneAccessLevelRole.schema";
 import { AccessLevelRoleDeleteManySchema } from "../schemas/deleteManyAccessLevelRole.schema";
@@ -18,12 +17,6 @@ export const accesslevelrolesRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateAccessLevelRole = await ctx.prisma.accessLevelRole.aggregate(input);
       return aggregateAccessLevelRole;
-    }),
-  createManyAccessLevelRole: publicProcedure
-    .input(AccessLevelRoleCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyAccessLevelRole = await ctx.prisma.accessLevelRole.createMany(input);
-      return createManyAccessLevelRole;
     }),
   createOneAccessLevelRole: publicProcedure
     .input(AccessLevelRoleCreateOneSchema)

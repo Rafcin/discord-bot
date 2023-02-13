@@ -3,7 +3,7 @@ import { StringFilterObjectSchema } from './StringFilter.schema'
 import { QuestionRelationFilterObjectSchema } from './QuestionRelationFilter.schema'
 import { QuestionWhereInputObjectSchema } from './QuestionWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.GitHubDiscussionWhereInput> = z
   .object({

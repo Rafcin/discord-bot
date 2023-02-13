@@ -7,7 +7,7 @@ import { ConfigurationWhereUniqueInputObjectSchema } from './ConfigurationWhereU
 import { ConfigurationUpdateWithoutRolesInputObjectSchema } from './ConfigurationUpdateWithoutRolesInput.schema'
 import { ConfigurationUncheckedUpdateWithoutRolesInputObjectSchema } from './ConfigurationUncheckedUpdateWithoutRolesInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.ConfigurationUpdateOneWithoutRolesNestedInput> =
   z

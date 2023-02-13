@@ -3,7 +3,6 @@ import { AccessLevelFindUniqueSchema } from "../schemas/findUniqueAccessLevel.sc
 import { AccessLevelFindFirstSchema } from "../schemas/findFirstAccessLevel.schema";
 import { AccessLevelFindManySchema } from "../schemas/findManyAccessLevel.schema";
 import { AccessLevelCreateOneSchema } from "../schemas/createOneAccessLevel.schema";
-import { AccessLevelCreateManySchema } from "../schemas/createManyAccessLevel.schema";
 import { AccessLevelDeleteOneSchema } from "../schemas/deleteOneAccessLevel.schema";
 import { AccessLevelUpdateOneSchema } from "../schemas/updateOneAccessLevel.schema";
 import { AccessLevelDeleteManySchema } from "../schemas/deleteManyAccessLevel.schema";
@@ -18,12 +17,6 @@ export const accesslevelsRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateAccessLevel = await ctx.prisma.accessLevel.aggregate(input);
       return aggregateAccessLevel;
-    }),
-  createManyAccessLevel: publicProcedure
-    .input(AccessLevelCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyAccessLevel = await ctx.prisma.accessLevel.createMany(input);
-      return createManyAccessLevel;
     }),
   createOneAccessLevel: publicProcedure
     .input(AccessLevelCreateOneSchema)

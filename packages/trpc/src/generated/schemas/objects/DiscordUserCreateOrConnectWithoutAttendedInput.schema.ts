@@ -3,7 +3,7 @@ import { DiscordUserWhereUniqueInputObjectSchema } from './DiscordUserWhereUniqu
 import { DiscordUserCreateWithoutAttendedInputObjectSchema } from './DiscordUserCreateWithoutAttendedInput.schema'
 import { DiscordUserUncheckedCreateWithoutAttendedInputObjectSchema } from './DiscordUserUncheckedCreateWithoutAttendedInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordUserCreateOrConnectWithoutAttendedInput> =
   z

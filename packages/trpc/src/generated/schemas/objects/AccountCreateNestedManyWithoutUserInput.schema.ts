@@ -2,10 +2,9 @@ import { z } from 'zod'
 import { AccountCreateWithoutUserInputObjectSchema } from './AccountCreateWithoutUserInput.schema'
 import { AccountUncheckedCreateWithoutUserInputObjectSchema } from './AccountUncheckedCreateWithoutUserInput.schema'
 import { AccountCreateOrConnectWithoutUserInputObjectSchema } from './AccountCreateOrConnectWithoutUserInput.schema'
-import { AccountCreateManyUserInputEnvelopeObjectSchema } from './AccountCreateManyUserInputEnvelope.schema'
 import { AccountWhereUniqueInputObjectSchema } from './AccountWhereUniqueInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccountCreateNestedManyWithoutUserInput> = z
   .object({
@@ -26,9 +25,6 @@ const Schema: z.ZodType<Prisma.AccountCreateNestedManyWithoutUserInput> = z
           .lazy(() => AccountCreateOrConnectWithoutUserInputObjectSchema)
           .array(),
       ])
-      .optional(),
-    createMany: z
-      .lazy(() => AccountCreateManyUserInputEnvelopeObjectSchema)
       .optional(),
     connect: z
       .union([

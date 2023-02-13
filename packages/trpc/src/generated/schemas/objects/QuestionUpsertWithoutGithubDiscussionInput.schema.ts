@@ -4,7 +4,7 @@ import { QuestionUncheckedUpdateWithoutGithubDiscussionInputObjectSchema } from 
 import { QuestionCreateWithoutGithubDiscussionInputObjectSchema } from './QuestionCreateWithoutGithubDiscussionInput.schema'
 import { QuestionUncheckedCreateWithoutGithubDiscussionInputObjectSchema } from './QuestionUncheckedCreateWithoutGithubDiscussionInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.QuestionUpsertWithoutGithubDiscussionInput> = z
   .object({

@@ -6,7 +6,7 @@ import { ConfigurationWhereInputObjectSchema } from './ConfigurationWhereInput.s
 import { QuestionListRelationFilterObjectSchema } from './QuestionListRelationFilter.schema'
 import { EventScheduleListRelationFilterObjectSchema } from './EventScheduleListRelationFilter.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.GuildWhereInput> = z
   .object({

@@ -3,7 +3,7 @@ import { ParticipationFindManySchema } from '../findManyParticipation.schema'
 import { AccessLevelRoleArgsObjectSchema } from './AccessLevelRoleArgs.schema'
 import { DiscordRoleCountOutputTypeArgsObjectSchema } from './DiscordRoleCountOutputTypeArgs.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordRoleSelect> = z
   .object({

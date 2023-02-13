@@ -3,13 +3,12 @@ import { AnswerCreateWithoutOwnerInputObjectSchema } from './AnswerCreateWithout
 import { AnswerUncheckedCreateWithoutOwnerInputObjectSchema } from './AnswerUncheckedCreateWithoutOwnerInput.schema'
 import { AnswerCreateOrConnectWithoutOwnerInputObjectSchema } from './AnswerCreateOrConnectWithoutOwnerInput.schema'
 import { AnswerUpsertWithWhereUniqueWithoutOwnerInputObjectSchema } from './AnswerUpsertWithWhereUniqueWithoutOwnerInput.schema'
-import { AnswerCreateManyOwnerInputEnvelopeObjectSchema } from './AnswerCreateManyOwnerInputEnvelope.schema'
 import { AnswerWhereUniqueInputObjectSchema } from './AnswerWhereUniqueInput.schema'
 import { AnswerUpdateWithWhereUniqueWithoutOwnerInputObjectSchema } from './AnswerUpdateWithWhereUniqueWithoutOwnerInput.schema'
 import { AnswerUpdateManyWithWhereWithoutOwnerInputObjectSchema } from './AnswerUpdateManyWithWhereWithoutOwnerInput.schema'
 import { AnswerScalarWhereInputObjectSchema } from './AnswerScalarWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AnswerUpdateManyWithoutOwnerNestedInput> = z
   .object({
@@ -38,9 +37,6 @@ const Schema: z.ZodType<Prisma.AnswerUpdateManyWithoutOwnerNestedInput> = z
           .lazy(() => AnswerUpsertWithWhereUniqueWithoutOwnerInputObjectSchema)
           .array(),
       ])
-      .optional(),
-    createMany: z
-      .lazy(() => AnswerCreateManyOwnerInputEnvelopeObjectSchema)
       .optional(),
     set: z
       .union([

@@ -3,7 +3,7 @@ import { AccountFindManySchema } from '../findManyAccount.schema'
 import { SessionFindManySchema } from '../findManySession.schema'
 import { UserCountOutputTypeArgsObjectSchema } from './UserCountOutputTypeArgs.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.UserInclude> = z
   .object({

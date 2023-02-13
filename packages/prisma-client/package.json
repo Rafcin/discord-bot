@@ -1,0 +1,30 @@
+{
+  "name": "@hey-amplify/prisma-client",
+  "private": true,
+  "type": "commonjs",
+  "version": "1.0.0",
+  "exports": {
+    ".": {
+      "default": "./build/generated/client/index.js",
+      "types": "./build/generated/client/index.d.ts"
+    },
+    "./package.json": "./package.json",
+    "./schema.prisma": "./schema.prisma"
+  },
+  "types": "./build/generated/client/index.d.ts",
+  "scripts": {
+    "[--- Prisma ---]": "",
+    "build": "prisma generate",
+    "push": "prisma db push",
+    "prepare": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.9.0"
+  },
+  "devDependencies": {
+    "prisma": "^4.9.0",
+    "prisma-docs-generator": "^0.5.0",
+    "prisma-trpc-generator": "^1.0.2",
+    "trpc-shield": "^0.4.0"
+  }
+}

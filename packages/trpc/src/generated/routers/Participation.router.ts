@@ -3,7 +3,6 @@ import { ParticipationFindUniqueSchema } from "../schemas/findUniqueParticipatio
 import { ParticipationFindFirstSchema } from "../schemas/findFirstParticipation.schema";
 import { ParticipationFindManySchema } from "../schemas/findManyParticipation.schema";
 import { ParticipationCreateOneSchema } from "../schemas/createOneParticipation.schema";
-import { ParticipationCreateManySchema } from "../schemas/createManyParticipation.schema";
 import { ParticipationDeleteOneSchema } from "../schemas/deleteOneParticipation.schema";
 import { ParticipationUpdateOneSchema } from "../schemas/updateOneParticipation.schema";
 import { ParticipationDeleteManySchema } from "../schemas/deleteManyParticipation.schema";
@@ -18,12 +17,6 @@ export const participationsRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateParticipation = await ctx.prisma.participation.aggregate(input);
       return aggregateParticipation;
-    }),
-  createManyParticipation: publicProcedure
-    .input(ParticipationCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyParticipation = await ctx.prisma.participation.createMany(input);
-      return createManyParticipation;
     }),
   createOneParticipation: publicProcedure
     .input(ParticipationCreateOneSchema)

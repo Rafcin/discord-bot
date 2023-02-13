@@ -7,7 +7,7 @@ import { UserWhereInputObjectSchema } from './UserWhereInput.schema'
 import { DiscordUserRelationFilterObjectSchema } from './DiscordUserRelationFilter.schema'
 import { DiscordUserWhereInputObjectSchema } from './DiscordUserWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccountWhereInput> = z
   .object({
@@ -30,9 +30,6 @@ const Schema: z.ZodType<Prisma.AccountWhereInput> = z
     id: z
       .union([z.lazy(() => StringFilterObjectSchema), z.string()])
       .optional(),
-    userId: z
-      .union([z.lazy(() => StringFilterObjectSchema), z.string()])
-      .optional(),
     type: z
       .union([z.lazy(() => StringFilterObjectSchema), z.string()])
       .optional(),
@@ -51,6 +48,10 @@ const Schema: z.ZodType<Prisma.AccountWhereInput> = z
       .optional()
       .nullable(),
     expires_at: z
+      .union([z.lazy(() => IntNullableFilterObjectSchema), z.number()])
+      .optional()
+      .nullable(),
+    refresh_token_expires_in: z
       .union([z.lazy(() => IntNullableFilterObjectSchema), z.number()])
       .optional()
       .nullable(),
@@ -76,7 +77,10 @@ const Schema: z.ZodType<Prisma.AccountWhereInput> = z
         z.lazy(() => UserWhereInputObjectSchema),
       ])
       .optional(),
-    DiscordUser: z
+    userId: z
+      .union([z.lazy(() => StringFilterObjectSchema), z.string()])
+      .optional(),
+    discordUser: z
       .union([
         z.lazy(() => DiscordUserRelationFilterObjectSchema),
         z.lazy(() => DiscordUserWhereInputObjectSchema),

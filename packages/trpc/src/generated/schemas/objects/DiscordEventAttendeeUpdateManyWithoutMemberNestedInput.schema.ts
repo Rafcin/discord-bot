@@ -3,13 +3,12 @@ import { DiscordEventAttendeeCreateWithoutMemberInputObjectSchema } from './Disc
 import { DiscordEventAttendeeUncheckedCreateWithoutMemberInputObjectSchema } from './DiscordEventAttendeeUncheckedCreateWithoutMemberInput.schema'
 import { DiscordEventAttendeeCreateOrConnectWithoutMemberInputObjectSchema } from './DiscordEventAttendeeCreateOrConnectWithoutMemberInput.schema'
 import { DiscordEventAttendeeUpsertWithWhereUniqueWithoutMemberInputObjectSchema } from './DiscordEventAttendeeUpsertWithWhereUniqueWithoutMemberInput.schema'
-import { DiscordEventAttendeeCreateManyMemberInputEnvelopeObjectSchema } from './DiscordEventAttendeeCreateManyMemberInputEnvelope.schema'
 import { DiscordEventAttendeeWhereUniqueInputObjectSchema } from './DiscordEventAttendeeWhereUniqueInput.schema'
 import { DiscordEventAttendeeUpdateWithWhereUniqueWithoutMemberInputObjectSchema } from './DiscordEventAttendeeUpdateWithWhereUniqueWithoutMemberInput.schema'
 import { DiscordEventAttendeeUpdateManyWithWhereWithoutMemberInputObjectSchema } from './DiscordEventAttendeeUpdateManyWithWhereWithoutMemberInput.schema'
 import { DiscordEventAttendeeScalarWhereInputObjectSchema } from './DiscordEventAttendeeScalarWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordEventAttendeeUpdateManyWithoutMemberNestedInput> =
   z
@@ -63,11 +62,6 @@ const Schema: z.ZodType<Prisma.DiscordEventAttendeeUpdateManyWithoutMemberNested
             )
             .array(),
         ])
-        .optional(),
-      createMany: z
-        .lazy(
-          () => DiscordEventAttendeeCreateManyMemberInputEnvelopeObjectSchema
-        )
         .optional(),
       set: z
         .union([

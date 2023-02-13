@@ -3,13 +3,12 @@ import { AccountCreateWithoutUserInputObjectSchema } from './AccountCreateWithou
 import { AccountUncheckedCreateWithoutUserInputObjectSchema } from './AccountUncheckedCreateWithoutUserInput.schema'
 import { AccountCreateOrConnectWithoutUserInputObjectSchema } from './AccountCreateOrConnectWithoutUserInput.schema'
 import { AccountUpsertWithWhereUniqueWithoutUserInputObjectSchema } from './AccountUpsertWithWhereUniqueWithoutUserInput.schema'
-import { AccountCreateManyUserInputEnvelopeObjectSchema } from './AccountCreateManyUserInputEnvelope.schema'
 import { AccountWhereUniqueInputObjectSchema } from './AccountWhereUniqueInput.schema'
 import { AccountUpdateWithWhereUniqueWithoutUserInputObjectSchema } from './AccountUpdateWithWhereUniqueWithoutUserInput.schema'
 import { AccountUpdateManyWithWhereWithoutUserInputObjectSchema } from './AccountUpdateManyWithWhereWithoutUserInput.schema'
 import { AccountScalarWhereInputObjectSchema } from './AccountScalarWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput> =
   z
@@ -43,9 +42,6 @@ const Schema: z.ZodType<Prisma.AccountUncheckedUpdateManyWithoutUserNestedInput>
             )
             .array(),
         ])
-        .optional(),
-      createMany: z
-        .lazy(() => AccountCreateManyUserInputEnvelopeObjectSchema)
         .optional(),
       set: z
         .union([

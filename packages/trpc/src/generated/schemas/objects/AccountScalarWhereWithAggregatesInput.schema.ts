@@ -3,7 +3,7 @@ import { StringWithAggregatesFilterObjectSchema } from './StringWithAggregatesFi
 import { StringNullableWithAggregatesFilterObjectSchema } from './StringNullableWithAggregatesFilter.schema'
 import { IntNullableWithAggregatesFilterObjectSchema } from './IntNullableWithAggregatesFilter.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccountScalarWhereWithAggregatesInput> = z
   .object({
@@ -24,9 +24,6 @@ const Schema: z.ZodType<Prisma.AccountScalarWhereWithAggregatesInput> = z
       ])
       .optional(),
     id: z
-      .union([z.lazy(() => StringWithAggregatesFilterObjectSchema), z.string()])
-      .optional(),
-    userId: z
       .union([z.lazy(() => StringWithAggregatesFilterObjectSchema), z.string()])
       .optional(),
     type: z
@@ -53,6 +50,13 @@ const Schema: z.ZodType<Prisma.AccountScalarWhereWithAggregatesInput> = z
       .optional()
       .nullable(),
     expires_at: z
+      .union([
+        z.lazy(() => IntNullableWithAggregatesFilterObjectSchema),
+        z.number(),
+      ])
+      .optional()
+      .nullable(),
+    refresh_token_expires_in: z
       .union([
         z.lazy(() => IntNullableWithAggregatesFilterObjectSchema),
         z.number(),
@@ -87,6 +91,9 @@ const Schema: z.ZodType<Prisma.AccountScalarWhereWithAggregatesInput> = z
       ])
       .optional()
       .nullable(),
+    userId: z
+      .union([z.lazy(() => StringWithAggregatesFilterObjectSchema), z.string()])
+      .optional(),
   })
   .strict()
 

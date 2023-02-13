@@ -3,7 +3,6 @@ import { UserFindUniqueSchema } from "../schemas/findUniqueUser.schema";
 import { UserFindFirstSchema } from "../schemas/findFirstUser.schema";
 import { UserFindManySchema } from "../schemas/findManyUser.schema";
 import { UserCreateOneSchema } from "../schemas/createOneUser.schema";
-import { UserCreateManySchema } from "../schemas/createManyUser.schema";
 import { UserDeleteOneSchema } from "../schemas/deleteOneUser.schema";
 import { UserUpdateOneSchema } from "../schemas/updateOneUser.schema";
 import { UserDeleteManySchema } from "../schemas/deleteManyUser.schema";
@@ -18,12 +17,6 @@ export const usersRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateUser = await ctx.prisma.user.aggregate(input);
       return aggregateUser;
-    }),
-  createManyUser: publicProcedure
-    .input(UserCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyUser = await ctx.prisma.user.createMany(input);
-      return createManyUser;
     }),
   createOneUser: publicProcedure
     .input(UserCreateOneSchema)

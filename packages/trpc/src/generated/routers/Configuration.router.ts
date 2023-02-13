@@ -3,7 +3,6 @@ import { ConfigurationFindUniqueSchema } from "../schemas/findUniqueConfiguratio
 import { ConfigurationFindFirstSchema } from "../schemas/findFirstConfiguration.schema";
 import { ConfigurationFindManySchema } from "../schemas/findManyConfiguration.schema";
 import { ConfigurationCreateOneSchema } from "../schemas/createOneConfiguration.schema";
-import { ConfigurationCreateManySchema } from "../schemas/createManyConfiguration.schema";
 import { ConfigurationDeleteOneSchema } from "../schemas/deleteOneConfiguration.schema";
 import { ConfigurationUpdateOneSchema } from "../schemas/updateOneConfiguration.schema";
 import { ConfigurationDeleteManySchema } from "../schemas/deleteManyConfiguration.schema";
@@ -18,12 +17,6 @@ export const configurationsRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateConfiguration = await ctx.prisma.configuration.aggregate(input);
       return aggregateConfiguration;
-    }),
-  createManyConfiguration: publicProcedure
-    .input(ConfigurationCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyConfiguration = await ctx.prisma.configuration.createMany(input);
-      return createManyConfiguration;
     }),
   createOneConfiguration: publicProcedure
     .input(ConfigurationCreateOneSchema)

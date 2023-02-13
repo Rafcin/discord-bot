@@ -10,7 +10,7 @@ import {
   type ThreadChannel,
   type Guild,
 } from 'discord.js'
-import { prisma } from '@hey-amplify/prisma'
+import { prisma } from './prisma'
 import {
   commands,
   createCommandFeatures,
@@ -18,7 +18,7 @@ import {
 } from './commands'
 import { PREFIXES } from './commands/thread'
 import { isHelpChannel, isThreadWithinHelpChannel } from './support'
-import { integrations } from '$lib/features/index'
+import { integrations } from '@hey-amplify/features'
 import { FEATURE_TYPES } from '@hey-amplify/constants'
 
 export const client = new Client({
@@ -199,7 +199,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
         create: {
           ownerId: (
             await message.channel.fetchStarterMessage()
-          ).author.id as string,
+          )?.author.id as string,
           threadId: message.channel.id,
           channelName: message.channel.parent!.name,
           title: message.channel.name,
@@ -323,10 +323,3 @@ process.on('exit', () => {
   console.log('destroying client')
   client?.destroy()
 })
-
-if (import.meta.hot) {
-  import.meta.hot.dispose(() => {
-    console.log('destroying client')
-    client?.destroy()
-  })
-}

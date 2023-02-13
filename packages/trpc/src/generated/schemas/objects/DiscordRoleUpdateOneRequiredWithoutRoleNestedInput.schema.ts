@@ -7,7 +7,7 @@ import { DiscordRoleWhereUniqueInputObjectSchema } from './DiscordRoleWhereUniqu
 import { DiscordRoleUpdateWithoutRoleInputObjectSchema } from './DiscordRoleUpdateWithoutRoleInput.schema'
 import { DiscordRoleUncheckedUpdateWithoutRoleInputObjectSchema } from './DiscordRoleUncheckedUpdateWithoutRoleInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordRoleUpdateOneRequiredWithoutRoleNestedInput> =
   z

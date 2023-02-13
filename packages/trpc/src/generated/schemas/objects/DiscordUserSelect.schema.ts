@@ -7,7 +7,7 @@ import { DiscordEventFindManySchema } from '../findManyDiscordEvent.schema'
 import { EventScheduleFindManySchema } from '../findManyEventSchedule.schema'
 import { DiscordUserCountOutputTypeArgsObjectSchema } from './DiscordUserCountOutputTypeArgs.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordUserSelect> = z
   .object({

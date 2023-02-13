@@ -7,7 +7,7 @@ import { QuestionWhereUniqueInputObjectSchema } from './QuestionWhereUniqueInput
 import { QuestionUpdateWithoutAnswerInputObjectSchema } from './QuestionUpdateWithoutAnswerInput.schema'
 import { QuestionUncheckedUpdateWithoutAnswerInputObjectSchema } from './QuestionUncheckedUpdateWithoutAnswerInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.QuestionUpdateOneRequiredWithoutAnswerNestedInput> =
   z

@@ -5,7 +5,7 @@ import { FeatureTypeWhereInputObjectSchema } from './FeatureTypeWhereInput.schem
 import { ConfigurationFeatureListRelationFilterObjectSchema } from './ConfigurationFeatureListRelationFilter.schema'
 import { FeatureInputsListRelationFilterObjectSchema } from './FeatureInputsListRelationFilter.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.FeatureWhereInput> = z
   .object({

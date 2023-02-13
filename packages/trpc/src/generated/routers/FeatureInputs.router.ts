@@ -3,7 +3,6 @@ import { FeatureInputsFindUniqueSchema } from "../schemas/findUniqueFeatureInput
 import { FeatureInputsFindFirstSchema } from "../schemas/findFirstFeatureInputs.schema";
 import { FeatureInputsFindManySchema } from "../schemas/findManyFeatureInputs.schema";
 import { FeatureInputsCreateOneSchema } from "../schemas/createOneFeatureInputs.schema";
-import { FeatureInputsCreateManySchema } from "../schemas/createManyFeatureInputs.schema";
 import { FeatureInputsDeleteOneSchema } from "../schemas/deleteOneFeatureInputs.schema";
 import { FeatureInputsUpdateOneSchema } from "../schemas/updateOneFeatureInputs.schema";
 import { FeatureInputsDeleteManySchema } from "../schemas/deleteManyFeatureInputs.schema";
@@ -18,12 +17,6 @@ export const featureinputsRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateFeatureInputs = await ctx.prisma.featureInputs.aggregate(input);
       return aggregateFeatureInputs;
-    }),
-  createManyFeatureInputs: publicProcedure
-    .input(FeatureInputsCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyFeatureInputs = await ctx.prisma.featureInputs.createMany(input);
-      return createManyFeatureInputs;
     }),
   createOneFeatureInputs: publicProcedure
     .input(FeatureInputsCreateOneSchema)

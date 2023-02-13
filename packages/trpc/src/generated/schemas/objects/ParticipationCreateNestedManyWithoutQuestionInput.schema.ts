@@ -2,10 +2,9 @@ import { z } from 'zod'
 import { ParticipationCreateWithoutQuestionInputObjectSchema } from './ParticipationCreateWithoutQuestionInput.schema'
 import { ParticipationUncheckedCreateWithoutQuestionInputObjectSchema } from './ParticipationUncheckedCreateWithoutQuestionInput.schema'
 import { ParticipationCreateOrConnectWithoutQuestionInputObjectSchema } from './ParticipationCreateOrConnectWithoutQuestionInput.schema'
-import { ParticipationCreateManyQuestionInputEnvelopeObjectSchema } from './ParticipationCreateManyQuestionInputEnvelope.schema'
 import { ParticipationWhereUniqueInputObjectSchema } from './ParticipationWhereUniqueInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.ParticipationCreateNestedManyWithoutQuestionInput> =
   z
@@ -37,9 +36,6 @@ const Schema: z.ZodType<Prisma.ParticipationCreateNestedManyWithoutQuestionInput
             )
             .array(),
         ])
-        .optional(),
-      createMany: z
-        .lazy(() => ParticipationCreateManyQuestionInputEnvelopeObjectSchema)
         .optional(),
       connect: z
         .union([

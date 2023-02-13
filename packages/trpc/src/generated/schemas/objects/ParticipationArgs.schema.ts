@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { ParticipationSelectObjectSchema } from './ParticipationSelect.schema'
 import { ParticipationIncludeObjectSchema } from './ParticipationInclude.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.ParticipationArgs> = z
   .object({

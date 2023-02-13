@@ -3,17 +3,11 @@ import { StringFieldUpdateOperationsInputObjectSchema } from './StringFieldUpdat
 import { NullableStringFieldUpdateOperationsInputObjectSchema } from './NullableStringFieldUpdateOperationsInput.schema'
 import { NullableIntFieldUpdateOperationsInputObjectSchema } from './NullableIntFieldUpdateOperationsInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccountUncheckedUpdateManyInput> = z
   .object({
     id: z
-      .union([
-        z.string(),
-        z.lazy(() => StringFieldUpdateOperationsInputObjectSchema),
-      ])
-      .optional(),
-    userId: z
       .union([
         z.string(),
         z.lazy(() => StringFieldUpdateOperationsInputObjectSchema),
@@ -58,6 +52,13 @@ const Schema: z.ZodType<Prisma.AccountUncheckedUpdateManyInput> = z
       ])
       .optional()
       .nullable(),
+    refresh_token_expires_in: z
+      .union([
+        z.number(),
+        z.lazy(() => NullableIntFieldUpdateOperationsInputObjectSchema),
+      ])
+      .optional()
+      .nullable(),
     token_type: z
       .union([
         z.string(),
@@ -86,6 +87,12 @@ const Schema: z.ZodType<Prisma.AccountUncheckedUpdateManyInput> = z
       ])
       .optional()
       .nullable(),
+    userId: z
+      .union([
+        z.string(),
+        z.lazy(() => StringFieldUpdateOperationsInputObjectSchema),
+      ])
+      .optional(),
   })
   .strict()
 

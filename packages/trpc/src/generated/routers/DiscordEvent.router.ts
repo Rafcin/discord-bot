@@ -3,7 +3,6 @@ import { DiscordEventFindUniqueSchema } from "../schemas/findUniqueDiscordEvent.
 import { DiscordEventFindFirstSchema } from "../schemas/findFirstDiscordEvent.schema";
 import { DiscordEventFindManySchema } from "../schemas/findManyDiscordEvent.schema";
 import { DiscordEventCreateOneSchema } from "../schemas/createOneDiscordEvent.schema";
-import { DiscordEventCreateManySchema } from "../schemas/createManyDiscordEvent.schema";
 import { DiscordEventDeleteOneSchema } from "../schemas/deleteOneDiscordEvent.schema";
 import { DiscordEventUpdateOneSchema } from "../schemas/updateOneDiscordEvent.schema";
 import { DiscordEventDeleteManySchema } from "../schemas/deleteManyDiscordEvent.schema";
@@ -18,12 +17,6 @@ export const discordeventsRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateDiscordEvent = await ctx.prisma.discordEvent.aggregate(input);
       return aggregateDiscordEvent;
-    }),
-  createManyDiscordEvent: publicProcedure
-    .input(DiscordEventCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyDiscordEvent = await ctx.prisma.discordEvent.createMany(input);
-      return createManyDiscordEvent;
     }),
   createOneDiscordEvent: publicProcedure
     .input(DiscordEventCreateOneSchema)

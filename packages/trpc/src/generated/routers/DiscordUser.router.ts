@@ -3,7 +3,6 @@ import { DiscordUserFindUniqueSchema } from "../schemas/findUniqueDiscordUser.sc
 import { DiscordUserFindFirstSchema } from "../schemas/findFirstDiscordUser.schema";
 import { DiscordUserFindManySchema } from "../schemas/findManyDiscordUser.schema";
 import { DiscordUserCreateOneSchema } from "../schemas/createOneDiscordUser.schema";
-import { DiscordUserCreateManySchema } from "../schemas/createManyDiscordUser.schema";
 import { DiscordUserDeleteOneSchema } from "../schemas/deleteOneDiscordUser.schema";
 import { DiscordUserUpdateOneSchema } from "../schemas/updateOneDiscordUser.schema";
 import { DiscordUserDeleteManySchema } from "../schemas/deleteManyDiscordUser.schema";
@@ -18,12 +17,6 @@ export const discordusersRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateDiscordUser = await ctx.prisma.discordUser.aggregate(input);
       return aggregateDiscordUser;
-    }),
-  createManyDiscordUser: publicProcedure
-    .input(DiscordUserCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyDiscordUser = await ctx.prisma.discordUser.createMany(input);
-      return createManyDiscordUser;
     }),
   createOneDiscordUser: publicProcedure
     .input(DiscordUserCreateOneSchema)

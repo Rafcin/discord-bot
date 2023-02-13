@@ -4,7 +4,7 @@ import { GitHubDiscussionUncheckedCreateWithoutQuestionInputObjectSchema } from 
 import { GitHubDiscussionCreateOrConnectWithoutQuestionInputObjectSchema } from './GitHubDiscussionCreateOrConnectWithoutQuestionInput.schema'
 import { GitHubDiscussionWhereUniqueInputObjectSchema } from './GitHubDiscussionWhereUniqueInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.GitHubDiscussionCreateNestedOneWithoutQuestionInput> =
   z

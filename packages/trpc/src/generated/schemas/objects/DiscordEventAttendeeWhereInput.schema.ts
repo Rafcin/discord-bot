@@ -7,7 +7,7 @@ import { DiscordUserWhereInputObjectSchema } from './DiscordUserWhereInput.schem
 import { DateTimeFilterObjectSchema } from './DateTimeFilter.schema'
 import { IntFilterObjectSchema } from './IntFilter.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordEventAttendeeWhereInput> = z
   .object({

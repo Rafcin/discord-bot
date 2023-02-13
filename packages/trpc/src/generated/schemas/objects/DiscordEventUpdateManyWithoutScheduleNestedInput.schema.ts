@@ -3,13 +3,12 @@ import { DiscordEventCreateWithoutScheduleInputObjectSchema } from './DiscordEve
 import { DiscordEventUncheckedCreateWithoutScheduleInputObjectSchema } from './DiscordEventUncheckedCreateWithoutScheduleInput.schema'
 import { DiscordEventCreateOrConnectWithoutScheduleInputObjectSchema } from './DiscordEventCreateOrConnectWithoutScheduleInput.schema'
 import { DiscordEventUpsertWithWhereUniqueWithoutScheduleInputObjectSchema } from './DiscordEventUpsertWithWhereUniqueWithoutScheduleInput.schema'
-import { DiscordEventCreateManyScheduleInputEnvelopeObjectSchema } from './DiscordEventCreateManyScheduleInputEnvelope.schema'
 import { DiscordEventWhereUniqueInputObjectSchema } from './DiscordEventWhereUniqueInput.schema'
 import { DiscordEventUpdateWithWhereUniqueWithoutScheduleInputObjectSchema } from './DiscordEventUpdateWithWhereUniqueWithoutScheduleInput.schema'
 import { DiscordEventUpdateManyWithWhereWithoutScheduleInputObjectSchema } from './DiscordEventUpdateManyWithWhereWithoutScheduleInput.schema'
 import { DiscordEventScalarWhereInputObjectSchema } from './DiscordEventScalarWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordEventUpdateManyWithoutScheduleNestedInput> =
   z
@@ -55,9 +54,6 @@ const Schema: z.ZodType<Prisma.DiscordEventUpdateManyWithoutScheduleNestedInput>
             )
             .array(),
         ])
-        .optional(),
-      createMany: z
-        .lazy(() => DiscordEventCreateManyScheduleInputEnvelopeObjectSchema)
         .optional(),
       set: z
         .union([

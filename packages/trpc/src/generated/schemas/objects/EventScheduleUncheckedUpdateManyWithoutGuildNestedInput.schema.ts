@@ -3,13 +3,12 @@ import { EventScheduleCreateWithoutGuildInputObjectSchema } from './EventSchedul
 import { EventScheduleUncheckedCreateWithoutGuildInputObjectSchema } from './EventScheduleUncheckedCreateWithoutGuildInput.schema'
 import { EventScheduleCreateOrConnectWithoutGuildInputObjectSchema } from './EventScheduleCreateOrConnectWithoutGuildInput.schema'
 import { EventScheduleUpsertWithWhereUniqueWithoutGuildInputObjectSchema } from './EventScheduleUpsertWithWhereUniqueWithoutGuildInput.schema'
-import { EventScheduleCreateManyGuildInputEnvelopeObjectSchema } from './EventScheduleCreateManyGuildInputEnvelope.schema'
 import { EventScheduleWhereUniqueInputObjectSchema } from './EventScheduleWhereUniqueInput.schema'
 import { EventScheduleUpdateWithWhereUniqueWithoutGuildInputObjectSchema } from './EventScheduleUpdateWithWhereUniqueWithoutGuildInput.schema'
 import { EventScheduleUpdateManyWithWhereWithoutGuildInputObjectSchema } from './EventScheduleUpdateManyWithWhereWithoutGuildInput.schema'
 import { EventScheduleScalarWhereInputObjectSchema } from './EventScheduleScalarWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.EventScheduleUncheckedUpdateManyWithoutGuildNestedInput> =
   z
@@ -55,9 +54,6 @@ const Schema: z.ZodType<Prisma.EventScheduleUncheckedUpdateManyWithoutGuildNeste
             )
             .array(),
         ])
-        .optional(),
-      createMany: z
-        .lazy(() => EventScheduleCreateManyGuildInputEnvelopeObjectSchema)
         .optional(),
       set: z
         .union([

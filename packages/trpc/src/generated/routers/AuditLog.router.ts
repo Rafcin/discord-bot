@@ -3,7 +3,6 @@ import { AuditLogFindUniqueSchema } from "../schemas/findUniqueAuditLog.schema";
 import { AuditLogFindFirstSchema } from "../schemas/findFirstAuditLog.schema";
 import { AuditLogFindManySchema } from "../schemas/findManyAuditLog.schema";
 import { AuditLogCreateOneSchema } from "../schemas/createOneAuditLog.schema";
-import { AuditLogCreateManySchema } from "../schemas/createManyAuditLog.schema";
 import { AuditLogDeleteOneSchema } from "../schemas/deleteOneAuditLog.schema";
 import { AuditLogUpdateOneSchema } from "../schemas/updateOneAuditLog.schema";
 import { AuditLogDeleteManySchema } from "../schemas/deleteManyAuditLog.schema";
@@ -18,12 +17,6 @@ export const auditlogsRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateAuditLog = await ctx.prisma.auditLog.aggregate(input);
       return aggregateAuditLog;
-    }),
-  createManyAuditLog: publicProcedure
-    .input(AuditLogCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyAuditLog = await ctx.prisma.auditLog.createMany(input);
-      return createManyAuditLog;
     }),
   createOneAuditLog: publicProcedure
     .input(AuditLogCreateOneSchema)

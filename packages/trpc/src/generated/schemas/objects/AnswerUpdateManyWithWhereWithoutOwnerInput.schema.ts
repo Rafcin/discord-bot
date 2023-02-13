@@ -3,7 +3,7 @@ import { AnswerScalarWhereInputObjectSchema } from './AnswerScalarWhereInput.sch
 import { AnswerUpdateManyMutationInputObjectSchema } from './AnswerUpdateManyMutationInput.schema'
 import { AnswerUncheckedUpdateManyWithoutAnswersInputObjectSchema } from './AnswerUncheckedUpdateManyWithoutAnswersInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AnswerUpdateManyWithWhereWithoutOwnerInput> = z
   .object({

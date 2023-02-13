@@ -3,7 +3,7 @@ import { AnswerWhereUniqueInputObjectSchema } from './AnswerWhereUniqueInput.sch
 import { AnswerUpdateWithoutOwnerInputObjectSchema } from './AnswerUpdateWithoutOwnerInput.schema'
 import { AnswerUncheckedUpdateWithoutOwnerInputObjectSchema } from './AnswerUncheckedUpdateWithoutOwnerInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AnswerUpdateWithWhereUniqueWithoutOwnerInput> = z
   .object({

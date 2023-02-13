@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { EventScheduleCountOutputTypeSelectObjectSchema } from './EventScheduleCountOutputTypeSelect.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.EventScheduleCountOutputTypeArgs> = z
   .object({

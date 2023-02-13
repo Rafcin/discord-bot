@@ -5,7 +5,7 @@ import { EventScheduleUncheckedUpdateWithoutGuildInputObjectSchema } from './Eve
 import { EventScheduleCreateWithoutGuildInputObjectSchema } from './EventScheduleCreateWithoutGuildInput.schema'
 import { EventScheduleUncheckedCreateWithoutGuildInputObjectSchema } from './EventScheduleUncheckedCreateWithoutGuildInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.EventScheduleUpsertWithWhereUniqueWithoutGuildInput> =
   z

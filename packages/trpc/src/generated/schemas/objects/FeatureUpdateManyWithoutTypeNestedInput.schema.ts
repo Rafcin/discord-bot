@@ -3,13 +3,12 @@ import { FeatureCreateWithoutTypeInputObjectSchema } from './FeatureCreateWithou
 import { FeatureUncheckedCreateWithoutTypeInputObjectSchema } from './FeatureUncheckedCreateWithoutTypeInput.schema'
 import { FeatureCreateOrConnectWithoutTypeInputObjectSchema } from './FeatureCreateOrConnectWithoutTypeInput.schema'
 import { FeatureUpsertWithWhereUniqueWithoutTypeInputObjectSchema } from './FeatureUpsertWithWhereUniqueWithoutTypeInput.schema'
-import { FeatureCreateManyTypeInputEnvelopeObjectSchema } from './FeatureCreateManyTypeInputEnvelope.schema'
 import { FeatureWhereUniqueInputObjectSchema } from './FeatureWhereUniqueInput.schema'
 import { FeatureUpdateWithWhereUniqueWithoutTypeInputObjectSchema } from './FeatureUpdateWithWhereUniqueWithoutTypeInput.schema'
 import { FeatureUpdateManyWithWhereWithoutTypeInputObjectSchema } from './FeatureUpdateManyWithWhereWithoutTypeInput.schema'
 import { FeatureScalarWhereInputObjectSchema } from './FeatureScalarWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.FeatureUpdateManyWithoutTypeNestedInput> = z
   .object({
@@ -38,9 +37,6 @@ const Schema: z.ZodType<Prisma.FeatureUpdateManyWithoutTypeNestedInput> = z
           .lazy(() => FeatureUpsertWithWhereUniqueWithoutTypeInputObjectSchema)
           .array(),
       ])
-      .optional(),
-    createMany: z
-      .lazy(() => FeatureCreateManyTypeInputEnvelopeObjectSchema)
       .optional(),
     set: z
       .union([

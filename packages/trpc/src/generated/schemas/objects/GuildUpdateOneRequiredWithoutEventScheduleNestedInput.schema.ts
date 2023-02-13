@@ -7,7 +7,7 @@ import { GuildWhereUniqueInputObjectSchema } from './GuildWhereUniqueInput.schem
 import { GuildUpdateWithoutEventScheduleInputObjectSchema } from './GuildUpdateWithoutEventScheduleInput.schema'
 import { GuildUncheckedUpdateWithoutEventScheduleInputObjectSchema } from './GuildUncheckedUpdateWithoutEventScheduleInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.GuildUpdateOneRequiredWithoutEventScheduleNestedInput> =
   z

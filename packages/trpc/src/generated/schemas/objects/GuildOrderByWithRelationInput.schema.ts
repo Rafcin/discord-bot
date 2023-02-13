@@ -4,7 +4,7 @@ import { ConfigurationOrderByWithRelationInputObjectSchema } from './Configurati
 import { QuestionOrderByRelationAggregateInputObjectSchema } from './QuestionOrderByRelationAggregateInput.schema'
 import { EventScheduleOrderByRelationAggregateInputObjectSchema } from './EventScheduleOrderByRelationAggregateInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.GuildOrderByWithRelationInput> = z
   .object({

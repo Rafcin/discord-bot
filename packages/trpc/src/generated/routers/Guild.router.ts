@@ -3,7 +3,6 @@ import { GuildFindUniqueSchema } from "../schemas/findUniqueGuild.schema";
 import { GuildFindFirstSchema } from "../schemas/findFirstGuild.schema";
 import { GuildFindManySchema } from "../schemas/findManyGuild.schema";
 import { GuildCreateOneSchema } from "../schemas/createOneGuild.schema";
-import { GuildCreateManySchema } from "../schemas/createManyGuild.schema";
 import { GuildDeleteOneSchema } from "../schemas/deleteOneGuild.schema";
 import { GuildUpdateOneSchema } from "../schemas/updateOneGuild.schema";
 import { GuildDeleteManySchema } from "../schemas/deleteManyGuild.schema";
@@ -18,12 +17,6 @@ export const guildsRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateGuild = await ctx.prisma.guild.aggregate(input);
       return aggregateGuild;
-    }),
-  createManyGuild: publicProcedure
-    .input(GuildCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyGuild = await ctx.prisma.guild.createMany(input);
-      return createManyGuild;
     }),
   createOneGuild: publicProcedure
     .input(GuildCreateOneSchema)

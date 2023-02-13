@@ -6,7 +6,7 @@ import { DiscordEventAttendeeMaxOrderByAggregateInputObjectSchema } from './Disc
 import { DiscordEventAttendeeMinOrderByAggregateInputObjectSchema } from './DiscordEventAttendeeMinOrderByAggregateInput.schema'
 import { DiscordEventAttendeeSumOrderByAggregateInputObjectSchema } from './DiscordEventAttendeeSumOrderByAggregateInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordEventAttendeeOrderByWithAggregationInput> =
   z

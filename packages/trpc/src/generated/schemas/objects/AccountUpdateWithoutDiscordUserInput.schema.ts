@@ -4,7 +4,7 @@ import { NullableStringFieldUpdateOperationsInputObjectSchema } from './Nullable
 import { NullableIntFieldUpdateOperationsInputObjectSchema } from './NullableIntFieldUpdateOperationsInput.schema'
 import { UserUpdateOneRequiredWithoutAccountsNestedInputObjectSchema } from './UserUpdateOneRequiredWithoutAccountsNestedInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccountUpdateWithoutDiscordUserInput> = z
   .object({
@@ -47,6 +47,13 @@ const Schema: z.ZodType<Prisma.AccountUpdateWithoutDiscordUserInput> = z
       .optional()
       .nullable(),
     expires_at: z
+      .union([
+        z.number(),
+        z.lazy(() => NullableIntFieldUpdateOperationsInputObjectSchema),
+      ])
+      .optional()
+      .nullable(),
+    refresh_token_expires_in: z
       .union([
         z.number(),
         z.lazy(() => NullableIntFieldUpdateOperationsInputObjectSchema),

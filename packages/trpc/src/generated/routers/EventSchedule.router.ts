@@ -3,7 +3,6 @@ import { EventScheduleFindUniqueSchema } from "../schemas/findUniqueEventSchedul
 import { EventScheduleFindFirstSchema } from "../schemas/findFirstEventSchedule.schema";
 import { EventScheduleFindManySchema } from "../schemas/findManyEventSchedule.schema";
 import { EventScheduleCreateOneSchema } from "../schemas/createOneEventSchedule.schema";
-import { EventScheduleCreateManySchema } from "../schemas/createManyEventSchedule.schema";
 import { EventScheduleDeleteOneSchema } from "../schemas/deleteOneEventSchedule.schema";
 import { EventScheduleUpdateOneSchema } from "../schemas/updateOneEventSchedule.schema";
 import { EventScheduleDeleteManySchema } from "../schemas/deleteManyEventSchedule.schema";
@@ -18,12 +17,6 @@ export const eventschedulesRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateEventSchedule = await ctx.prisma.eventSchedule.aggregate(input);
       return aggregateEventSchedule;
-    }),
-  createManyEventSchedule: publicProcedure
-    .input(EventScheduleCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyEventSchedule = await ctx.prisma.eventSchedule.createMany(input);
-      return createManyEventSchedule;
     }),
   createOneEventSchedule: publicProcedure
     .input(EventScheduleCreateOneSchema)

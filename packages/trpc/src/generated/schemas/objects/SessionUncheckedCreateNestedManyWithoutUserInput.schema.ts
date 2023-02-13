@@ -2,10 +2,9 @@ import { z } from 'zod'
 import { SessionCreateWithoutUserInputObjectSchema } from './SessionCreateWithoutUserInput.schema'
 import { SessionUncheckedCreateWithoutUserInputObjectSchema } from './SessionUncheckedCreateWithoutUserInput.schema'
 import { SessionCreateOrConnectWithoutUserInputObjectSchema } from './SessionCreateOrConnectWithoutUserInput.schema'
-import { SessionCreateManyUserInputEnvelopeObjectSchema } from './SessionCreateManyUserInputEnvelope.schema'
 import { SessionWhereUniqueInputObjectSchema } from './SessionWhereUniqueInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.SessionUncheckedCreateNestedManyWithoutUserInput> =
   z
@@ -27,9 +26,6 @@ const Schema: z.ZodType<Prisma.SessionUncheckedCreateNestedManyWithoutUserInput>
             .lazy(() => SessionCreateOrConnectWithoutUserInputObjectSchema)
             .array(),
         ])
-        .optional(),
-      createMany: z
-        .lazy(() => SessionCreateManyUserInputEnvelopeObjectSchema)
         .optional(),
       connect: z
         .union([

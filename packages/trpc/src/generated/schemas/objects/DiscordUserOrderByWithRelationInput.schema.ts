@@ -7,7 +7,7 @@ import { DiscordEventAttendeeOrderByRelationAggregateInputObjectSchema } from '.
 import { DiscordEventOrderByRelationAggregateInputObjectSchema } from './DiscordEventOrderByRelationAggregateInput.schema'
 import { EventScheduleOrderByRelationAggregateInputObjectSchema } from './EventScheduleOrderByRelationAggregateInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordUserOrderByWithRelationInput> = z
   .object({

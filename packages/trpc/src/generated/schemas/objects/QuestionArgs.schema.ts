@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { QuestionSelectObjectSchema } from './QuestionSelect.schema'
 import { QuestionIncludeObjectSchema } from './QuestionInclude.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.QuestionArgs> = z
   .object({

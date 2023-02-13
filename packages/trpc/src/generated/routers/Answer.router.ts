@@ -3,7 +3,6 @@ import { AnswerFindUniqueSchema } from "../schemas/findUniqueAnswer.schema";
 import { AnswerFindFirstSchema } from "../schemas/findFirstAnswer.schema";
 import { AnswerFindManySchema } from "../schemas/findManyAnswer.schema";
 import { AnswerCreateOneSchema } from "../schemas/createOneAnswer.schema";
-import { AnswerCreateManySchema } from "../schemas/createManyAnswer.schema";
 import { AnswerDeleteOneSchema } from "../schemas/deleteOneAnswer.schema";
 import { AnswerUpdateOneSchema } from "../schemas/updateOneAnswer.schema";
 import { AnswerDeleteManySchema } from "../schemas/deleteManyAnswer.schema";
@@ -18,12 +17,6 @@ export const answersRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateAnswer = await ctx.prisma.answer.aggregate(input);
       return aggregateAnswer;
-    }),
-  createManyAnswer: publicProcedure
-    .input(AnswerCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyAnswer = await ctx.prisma.answer.createMany(input);
-      return createManyAnswer;
     }),
   createOneAnswer: publicProcedure
     .input(AnswerCreateOneSchema)

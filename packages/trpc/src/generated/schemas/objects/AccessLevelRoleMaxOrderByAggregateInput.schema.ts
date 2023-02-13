@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { SortOrderSchema } from '../enums/SortOrder.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccessLevelRoleMaxOrderByAggregateInput> = z
   .object({

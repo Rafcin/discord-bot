@@ -3,13 +3,12 @@ import { QuestionCreateWithoutGuildInputObjectSchema } from './QuestionCreateWit
 import { QuestionUncheckedCreateWithoutGuildInputObjectSchema } from './QuestionUncheckedCreateWithoutGuildInput.schema'
 import { QuestionCreateOrConnectWithoutGuildInputObjectSchema } from './QuestionCreateOrConnectWithoutGuildInput.schema'
 import { QuestionUpsertWithWhereUniqueWithoutGuildInputObjectSchema } from './QuestionUpsertWithWhereUniqueWithoutGuildInput.schema'
-import { QuestionCreateManyGuildInputEnvelopeObjectSchema } from './QuestionCreateManyGuildInputEnvelope.schema'
 import { QuestionWhereUniqueInputObjectSchema } from './QuestionWhereUniqueInput.schema'
 import { QuestionUpdateWithWhereUniqueWithoutGuildInputObjectSchema } from './QuestionUpdateWithWhereUniqueWithoutGuildInput.schema'
 import { QuestionUpdateManyWithWhereWithoutGuildInputObjectSchema } from './QuestionUpdateManyWithWhereWithoutGuildInput.schema'
 import { QuestionScalarWhereInputObjectSchema } from './QuestionScalarWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.QuestionUpdateManyWithoutGuildNestedInput> = z
   .object({
@@ -42,9 +41,6 @@ const Schema: z.ZodType<Prisma.QuestionUpdateManyWithoutGuildNestedInput> = z
           )
           .array(),
       ])
-      .optional(),
-    createMany: z
-      .lazy(() => QuestionCreateManyGuildInputEnvelopeObjectSchema)
       .optional(),
     set: z
       .union([

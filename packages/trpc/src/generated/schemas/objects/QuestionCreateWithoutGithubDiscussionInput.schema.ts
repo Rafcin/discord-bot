@@ -4,7 +4,7 @@ import { GuildCreateNestedOneWithoutQuestionsInputObjectSchema } from './GuildCr
 import { ParticipationCreateNestedManyWithoutQuestionInputObjectSchema } from './ParticipationCreateNestedManyWithoutQuestionInput.schema'
 import { QuestionTagCreateNestedOneWithoutQuestionsInputObjectSchema } from './QuestionTagCreateNestedOneWithoutQuestionsInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.QuestionCreateWithoutGithubDiscussionInput> = z
   .object({

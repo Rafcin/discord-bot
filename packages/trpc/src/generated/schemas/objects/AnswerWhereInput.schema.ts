@@ -9,7 +9,7 @@ import { QuestionWhereInputObjectSchema } from './QuestionWhereInput.schema'
 import { ParticipationRelationFilterObjectSchema } from './ParticipationRelationFilter.schema'
 import { ParticipationWhereInputObjectSchema } from './ParticipationWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AnswerWhereInput> = z
   .object({

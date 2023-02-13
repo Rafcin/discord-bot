@@ -2,10 +2,9 @@ import { z } from 'zod'
 import { AccessLevelRoleCreateWithoutConfigurationInputObjectSchema } from './AccessLevelRoleCreateWithoutConfigurationInput.schema'
 import { AccessLevelRoleUncheckedCreateWithoutConfigurationInputObjectSchema } from './AccessLevelRoleUncheckedCreateWithoutConfigurationInput.schema'
 import { AccessLevelRoleCreateOrConnectWithoutConfigurationInputObjectSchema } from './AccessLevelRoleCreateOrConnectWithoutConfigurationInput.schema'
-import { AccessLevelRoleCreateManyConfigurationInputEnvelopeObjectSchema } from './AccessLevelRoleCreateManyConfigurationInputEnvelope.schema'
 import { AccessLevelRoleWhereUniqueInputObjectSchema } from './AccessLevelRoleWhereUniqueInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccessLevelRoleCreateNestedManyWithoutConfigurationInput> =
   z
@@ -45,11 +44,6 @@ const Schema: z.ZodType<Prisma.AccessLevelRoleCreateNestedManyWithoutConfigurati
             )
             .array(),
         ])
-        .optional(),
-      createMany: z
-        .lazy(
-          () => AccessLevelRoleCreateManyConfigurationInputEnvelopeObjectSchema
-        )
         .optional(),
       connect: z
         .union([

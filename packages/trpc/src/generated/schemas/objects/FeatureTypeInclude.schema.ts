@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { FeatureFindManySchema } from '../findManyFeature.schema'
 import { FeatureTypeCountOutputTypeArgsObjectSchema } from './FeatureTypeCountOutputTypeArgs.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.FeatureTypeInclude> = z
   .object({

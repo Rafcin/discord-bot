@@ -3,7 +3,6 @@ import { FeatureTypeFindUniqueSchema } from "../schemas/findUniqueFeatureType.sc
 import { FeatureTypeFindFirstSchema } from "../schemas/findFirstFeatureType.schema";
 import { FeatureTypeFindManySchema } from "../schemas/findManyFeatureType.schema";
 import { FeatureTypeCreateOneSchema } from "../schemas/createOneFeatureType.schema";
-import { FeatureTypeCreateManySchema } from "../schemas/createManyFeatureType.schema";
 import { FeatureTypeDeleteOneSchema } from "../schemas/deleteOneFeatureType.schema";
 import { FeatureTypeUpdateOneSchema } from "../schemas/updateOneFeatureType.schema";
 import { FeatureTypeDeleteManySchema } from "../schemas/deleteManyFeatureType.schema";
@@ -18,12 +17,6 @@ export const featuretypesRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateFeatureType = await ctx.prisma.featureType.aggregate(input);
       return aggregateFeatureType;
-    }),
-  createManyFeatureType: publicProcedure
-    .input(FeatureTypeCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyFeatureType = await ctx.prisma.featureType.createMany(input);
-      return createManyFeatureType;
     }),
   createOneFeatureType: publicProcedure
     .input(FeatureTypeCreateOneSchema)

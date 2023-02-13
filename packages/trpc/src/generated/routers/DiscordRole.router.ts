@@ -3,7 +3,6 @@ import { DiscordRoleFindUniqueSchema } from "../schemas/findUniqueDiscordRole.sc
 import { DiscordRoleFindFirstSchema } from "../schemas/findFirstDiscordRole.schema";
 import { DiscordRoleFindManySchema } from "../schemas/findManyDiscordRole.schema";
 import { DiscordRoleCreateOneSchema } from "../schemas/createOneDiscordRole.schema";
-import { DiscordRoleCreateManySchema } from "../schemas/createManyDiscordRole.schema";
 import { DiscordRoleDeleteOneSchema } from "../schemas/deleteOneDiscordRole.schema";
 import { DiscordRoleUpdateOneSchema } from "../schemas/updateOneDiscordRole.schema";
 import { DiscordRoleDeleteManySchema } from "../schemas/deleteManyDiscordRole.schema";
@@ -18,12 +17,6 @@ export const discordrolesRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateDiscordRole = await ctx.prisma.discordRole.aggregate(input);
       return aggregateDiscordRole;
-    }),
-  createManyDiscordRole: publicProcedure
-    .input(DiscordRoleCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyDiscordRole = await ctx.prisma.discordRole.createMany(input);
-      return createManyDiscordRole;
     }),
   createOneDiscordRole: publicProcedure
     .input(DiscordRoleCreateOneSchema)

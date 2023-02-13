@@ -5,7 +5,7 @@ import { QuestionUncheckedUpdateWithoutGuildInputObjectSchema } from './Question
 import { QuestionCreateWithoutGuildInputObjectSchema } from './QuestionCreateWithoutGuildInput.schema'
 import { QuestionUncheckedCreateWithoutGuildInputObjectSchema } from './QuestionUncheckedCreateWithoutGuildInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.QuestionUpsertWithWhereUniqueWithoutGuildInput> =
   z

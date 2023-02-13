@@ -3,7 +3,6 @@ import { FeatureFindUniqueSchema } from "../schemas/findUniqueFeature.schema";
 import { FeatureFindFirstSchema } from "../schemas/findFirstFeature.schema";
 import { FeatureFindManySchema } from "../schemas/findManyFeature.schema";
 import { FeatureCreateOneSchema } from "../schemas/createOneFeature.schema";
-import { FeatureCreateManySchema } from "../schemas/createManyFeature.schema";
 import { FeatureDeleteOneSchema } from "../schemas/deleteOneFeature.schema";
 import { FeatureUpdateOneSchema } from "../schemas/updateOneFeature.schema";
 import { FeatureDeleteManySchema } from "../schemas/deleteManyFeature.schema";
@@ -18,12 +17,6 @@ export const featuresRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateFeature = await ctx.prisma.feature.aggregate(input);
       return aggregateFeature;
-    }),
-  createManyFeature: publicProcedure
-    .input(FeatureCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyFeature = await ctx.prisma.feature.createMany(input);
-      return createManyFeature;
     }),
   createOneFeature: publicProcedure
     .input(FeatureCreateOneSchema)

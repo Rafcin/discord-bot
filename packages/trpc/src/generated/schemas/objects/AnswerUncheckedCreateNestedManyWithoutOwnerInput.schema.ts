@@ -2,10 +2,9 @@ import { z } from 'zod'
 import { AnswerCreateWithoutOwnerInputObjectSchema } from './AnswerCreateWithoutOwnerInput.schema'
 import { AnswerUncheckedCreateWithoutOwnerInputObjectSchema } from './AnswerUncheckedCreateWithoutOwnerInput.schema'
 import { AnswerCreateOrConnectWithoutOwnerInputObjectSchema } from './AnswerCreateOrConnectWithoutOwnerInput.schema'
-import { AnswerCreateManyOwnerInputEnvelopeObjectSchema } from './AnswerCreateManyOwnerInputEnvelope.schema'
 import { AnswerWhereUniqueInputObjectSchema } from './AnswerWhereUniqueInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AnswerUncheckedCreateNestedManyWithoutOwnerInput> =
   z
@@ -27,9 +26,6 @@ const Schema: z.ZodType<Prisma.AnswerUncheckedCreateNestedManyWithoutOwnerInput>
             .lazy(() => AnswerCreateOrConnectWithoutOwnerInputObjectSchema)
             .array(),
         ])
-        .optional(),
-      createMany: z
-        .lazy(() => AnswerCreateManyOwnerInputEnvelopeObjectSchema)
         .optional(),
       connect: z
         .union([

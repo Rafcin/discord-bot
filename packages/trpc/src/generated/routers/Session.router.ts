@@ -3,7 +3,6 @@ import { SessionFindUniqueSchema } from "../schemas/findUniqueSession.schema";
 import { SessionFindFirstSchema } from "../schemas/findFirstSession.schema";
 import { SessionFindManySchema } from "../schemas/findManySession.schema";
 import { SessionCreateOneSchema } from "../schemas/createOneSession.schema";
-import { SessionCreateManySchema } from "../schemas/createManySession.schema";
 import { SessionDeleteOneSchema } from "../schemas/deleteOneSession.schema";
 import { SessionUpdateOneSchema } from "../schemas/updateOneSession.schema";
 import { SessionDeleteManySchema } from "../schemas/deleteManySession.schema";
@@ -18,12 +17,6 @@ export const sessionsRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateSession = await ctx.prisma.session.aggregate(input);
       return aggregateSession;
-    }),
-  createManySession: publicProcedure
-    .input(SessionCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManySession = await ctx.prisma.session.createMany(input);
-      return createManySession;
     }),
   createOneSession: publicProcedure
     .input(SessionCreateOneSchema)

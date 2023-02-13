@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { DiscordUserUncheckedCreateNestedOneWithoutAccountInputObjectSchema } from './DiscordUserUncheckedCreateNestedOneWithoutAccountInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccountUncheckedCreateWithoutUserInput> = z
   .object({
@@ -12,11 +12,12 @@ const Schema: z.ZodType<Prisma.AccountUncheckedCreateWithoutUserInput> = z
     refresh_token: z.string().optional().nullable(),
     access_token: z.string().optional().nullable(),
     expires_at: z.number().optional().nullable(),
+    refresh_token_expires_in: z.number().optional().nullable(),
     token_type: z.string().optional().nullable(),
     scope: z.string().optional().nullable(),
     id_token: z.string().optional().nullable(),
     session_state: z.string().optional().nullable(),
-    DiscordUser: z
+    discordUser: z
       .lazy(
         () => DiscordUserUncheckedCreateNestedOneWithoutAccountInputObjectSchema
       )

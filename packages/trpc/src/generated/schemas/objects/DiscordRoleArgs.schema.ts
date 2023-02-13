@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { DiscordRoleSelectObjectSchema } from './DiscordRoleSelect.schema'
 import { DiscordRoleIncludeObjectSchema } from './DiscordRoleInclude.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.DiscordRoleArgs> = z
   .object({

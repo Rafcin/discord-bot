@@ -3,7 +3,7 @@ import { AccessLevelRoleWhereUniqueInputObjectSchema } from './AccessLevelRoleWh
 import { AccessLevelRoleUpdateWithoutConfigurationInputObjectSchema } from './AccessLevelRoleUpdateWithoutConfigurationInput.schema'
 import { AccessLevelRoleUncheckedUpdateWithoutConfigurationInputObjectSchema } from './AccessLevelRoleUncheckedUpdateWithoutConfigurationInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccessLevelRoleUpdateWithWhereUniqueWithoutConfigurationInput> =
   z

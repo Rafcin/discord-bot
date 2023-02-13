@@ -4,7 +4,7 @@ import { FeatureCountOrderByAggregateInputObjectSchema } from './FeatureCountOrd
 import { FeatureMaxOrderByAggregateInputObjectSchema } from './FeatureMaxOrderByAggregateInput.schema'
 import { FeatureMinOrderByAggregateInputObjectSchema } from './FeatureMinOrderByAggregateInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.FeatureOrderByWithAggregationInput> = z
   .object({

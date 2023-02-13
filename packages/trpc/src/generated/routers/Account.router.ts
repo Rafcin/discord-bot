@@ -3,7 +3,6 @@ import { AccountFindUniqueSchema } from "../schemas/findUniqueAccount.schema";
 import { AccountFindFirstSchema } from "../schemas/findFirstAccount.schema";
 import { AccountFindManySchema } from "../schemas/findManyAccount.schema";
 import { AccountCreateOneSchema } from "../schemas/createOneAccount.schema";
-import { AccountCreateManySchema } from "../schemas/createManyAccount.schema";
 import { AccountDeleteOneSchema } from "../schemas/deleteOneAccount.schema";
 import { AccountUpdateOneSchema } from "../schemas/updateOneAccount.schema";
 import { AccountDeleteManySchema } from "../schemas/deleteManyAccount.schema";
@@ -18,12 +17,6 @@ export const accountsRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateAccount = await ctx.prisma.account.aggregate(input);
       return aggregateAccount;
-    }),
-  createManyAccount: publicProcedure
-    .input(AccountCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyAccount = await ctx.prisma.account.createMany(input);
-      return createManyAccount;
     }),
   createOneAccount: publicProcedure
     .input(AccountCreateOneSchema)

@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { SessionSelectObjectSchema } from './SessionSelect.schema'
 import { SessionIncludeObjectSchema } from './SessionInclude.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.SessionArgs> = z
   .object({

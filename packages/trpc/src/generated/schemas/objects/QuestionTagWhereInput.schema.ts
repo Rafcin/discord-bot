@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { StringFilterObjectSchema } from './StringFilter.schema'
 import { QuestionListRelationFilterObjectSchema } from './QuestionListRelationFilter.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.QuestionTagWhereInput> = z
   .object({

@@ -3,7 +3,6 @@ import { GitHubDiscussionFindUniqueSchema } from "../schemas/findUniqueGitHubDis
 import { GitHubDiscussionFindFirstSchema } from "../schemas/findFirstGitHubDiscussion.schema";
 import { GitHubDiscussionFindManySchema } from "../schemas/findManyGitHubDiscussion.schema";
 import { GitHubDiscussionCreateOneSchema } from "../schemas/createOneGitHubDiscussion.schema";
-import { GitHubDiscussionCreateManySchema } from "../schemas/createManyGitHubDiscussion.schema";
 import { GitHubDiscussionDeleteOneSchema } from "../schemas/deleteOneGitHubDiscussion.schema";
 import { GitHubDiscussionUpdateOneSchema } from "../schemas/updateOneGitHubDiscussion.schema";
 import { GitHubDiscussionDeleteManySchema } from "../schemas/deleteManyGitHubDiscussion.schema";
@@ -18,12 +17,6 @@ export const githubdiscussionsRouter = t.router({
     .query(async ({ ctx, input }) => {
       const aggregateGitHubDiscussion = await ctx.prisma.gitHubDiscussion.aggregate(input);
       return aggregateGitHubDiscussion;
-    }),
-  createManyGitHubDiscussion: publicProcedure
-    .input(GitHubDiscussionCreateManySchema)
-    .mutation(async ({ ctx, input }) => {
-      const createManyGitHubDiscussion = await ctx.prisma.gitHubDiscussion.createMany(input);
-      return createManyGitHubDiscussion;
     }),
   createOneGitHubDiscussion: publicProcedure
     .input(GitHubDiscussionCreateOneSchema)

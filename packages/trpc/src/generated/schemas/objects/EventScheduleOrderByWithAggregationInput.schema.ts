@@ -4,7 +4,7 @@ import { EventScheduleCountOrderByAggregateInputObjectSchema } from './EventSche
 import { EventScheduleMaxOrderByAggregateInputObjectSchema } from './EventScheduleMaxOrderByAggregateInput.schema'
 import { EventScheduleMinOrderByAggregateInputObjectSchema } from './EventScheduleMinOrderByAggregateInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.EventScheduleOrderByWithAggregationInput> = z
   .object({

@@ -3,13 +3,12 @@ import { AccessLevelRoleCreateWithoutAccessLevelInputObjectSchema } from './Acce
 import { AccessLevelRoleUncheckedCreateWithoutAccessLevelInputObjectSchema } from './AccessLevelRoleUncheckedCreateWithoutAccessLevelInput.schema'
 import { AccessLevelRoleCreateOrConnectWithoutAccessLevelInputObjectSchema } from './AccessLevelRoleCreateOrConnectWithoutAccessLevelInput.schema'
 import { AccessLevelRoleUpsertWithWhereUniqueWithoutAccessLevelInputObjectSchema } from './AccessLevelRoleUpsertWithWhereUniqueWithoutAccessLevelInput.schema'
-import { AccessLevelRoleCreateManyAccessLevelInputEnvelopeObjectSchema } from './AccessLevelRoleCreateManyAccessLevelInputEnvelope.schema'
 import { AccessLevelRoleWhereUniqueInputObjectSchema } from './AccessLevelRoleWhereUniqueInput.schema'
 import { AccessLevelRoleUpdateWithWhereUniqueWithoutAccessLevelInputObjectSchema } from './AccessLevelRoleUpdateWithWhereUniqueWithoutAccessLevelInput.schema'
 import { AccessLevelRoleUpdateManyWithWhereWithoutAccessLevelInputObjectSchema } from './AccessLevelRoleUpdateManyWithWhereWithoutAccessLevelInput.schema'
 import { AccessLevelRoleScalarWhereInputObjectSchema } from './AccessLevelRoleScalarWhereInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AccessLevelRoleUncheckedUpdateManyWithoutAccessLevelNestedInput> =
   z
@@ -63,11 +62,6 @@ const Schema: z.ZodType<Prisma.AccessLevelRoleUncheckedUpdateManyWithoutAccessLe
             )
             .array(),
         ])
-        .optional(),
-      createMany: z
-        .lazy(
-          () => AccessLevelRoleCreateManyAccessLevelInputEnvelopeObjectSchema
-        )
         .optional(),
       set: z
         .union([

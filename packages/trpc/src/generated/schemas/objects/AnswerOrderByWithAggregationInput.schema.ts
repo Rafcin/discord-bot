@@ -4,7 +4,7 @@ import { AnswerCountOrderByAggregateInputObjectSchema } from './AnswerCountOrder
 import { AnswerMaxOrderByAggregateInputObjectSchema } from './AnswerMaxOrderByAggregateInput.schema'
 import { AnswerMinOrderByAggregateInputObjectSchema } from './AnswerMinOrderByAggregateInput.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.AnswerOrderByWithAggregationInput> = z
   .object({

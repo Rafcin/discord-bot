@@ -7,8 +7,7 @@
     ".": {
       "import": "./index.js"
     },
-    "./package.json": "./package.json",
-    "./schema.prisma": "./schema.prisma"
+    "./package.json": "./package.json"
   },
   "scripts": {
     "[--- Build ---]": "",
@@ -32,6 +31,6 @@
     "zod": "^3.20.2",
     "zod-prisma-types": "^2.0.8",
     "next": "^13.1.6",
-    "@hey-amplify/prisma": "*"
+    "@hey-amplify/prisma-client": "*"
   }
 }

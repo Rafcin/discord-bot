@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { ConfigurationFeatureSelectObjectSchema } from './ConfigurationFeatureSelect.schema'
 import { ConfigurationFeatureIncludeObjectSchema } from './ConfigurationFeatureInclude.schema'
 
-import type { Prisma } from '@prisma/client'
+import type { Prisma } from '../../../../../prisma-client/build/generated/client'
 
 const Schema: z.ZodType<Prisma.ConfigurationFeatureArgs> = z
   .object({
