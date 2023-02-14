@@ -4,7 +4,7 @@ import { ConfigurationUncheckedUpdateWithoutGuildInputObjectSchema } from './Con
 import { ConfigurationCreateWithoutGuildInputObjectSchema } from './ConfigurationCreateWithoutGuildInput.schema'
 import { ConfigurationUncheckedCreateWithoutGuildInputObjectSchema } from './ConfigurationUncheckedCreateWithoutGuildInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.ConfigurationUpsertWithoutGuildInput> = z
   .object({

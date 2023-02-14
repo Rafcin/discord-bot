@@ -3,7 +3,7 @@ import { SortOrderSchema } from '../enums/SortOrder.schema'
 import { AccountOrderByRelationAggregateInputObjectSchema } from './AccountOrderByRelationAggregateInput.schema'
 import { SessionOrderByRelationAggregateInputObjectSchema } from './SessionOrderByRelationAggregateInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.UserOrderByWithRelationInput> = z
   .object({

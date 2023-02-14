@@ -3,7 +3,7 @@ import { ParticipationWhereUniqueInputObjectSchema } from './ParticipationWhereU
 import { ParticipationCreateWithoutParticipantRolesInputObjectSchema } from './ParticipationCreateWithoutParticipantRolesInput.schema'
 import { ParticipationUncheckedCreateWithoutParticipantRolesInputObjectSchema } from './ParticipationUncheckedCreateWithoutParticipantRolesInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.ParticipationCreateOrConnectWithoutParticipantRolesInput> =
   z

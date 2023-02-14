@@ -6,7 +6,7 @@ import { DiscordEventAttendeeUpdateManyWithoutMemberNestedInputObjectSchema } fr
 import { DiscordEventUpdateManyWithoutCreatedByNestedInputObjectSchema } from './DiscordEventUpdateManyWithoutCreatedByNestedInput.schema'
 import { EventScheduleUpdateManyWithoutCreatedByNestedInputObjectSchema } from './EventScheduleUpdateManyWithoutCreatedByNestedInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordUserUpdateWithoutAnswersInput> = z
   .object({

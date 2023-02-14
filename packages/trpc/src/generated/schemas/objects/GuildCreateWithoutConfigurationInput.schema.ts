@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { QuestionCreateNestedManyWithoutGuildInputObjectSchema } from './QuestionCreateNestedManyWithoutGuildInput.schema'
 import { EventScheduleCreateNestedManyWithoutGuildInputObjectSchema } from './EventScheduleCreateNestedManyWithoutGuildInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.GuildCreateWithoutConfigurationInput> = z
   .object({

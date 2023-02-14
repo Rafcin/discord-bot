@@ -3,7 +3,7 @@ import { StringFieldUpdateOperationsInputObjectSchema } from './StringFieldUpdat
 import { ParticipationUpdateManyWithoutParticipantRolesNestedInputObjectSchema } from './ParticipationUpdateManyWithoutParticipantRolesNestedInput.schema'
 import { AccessLevelRoleUpdateOneWithoutDiscordRoleNestedInputObjectSchema } from './AccessLevelRoleUpdateOneWithoutDiscordRoleNestedInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordRoleUpdateInput> = z
   .object({

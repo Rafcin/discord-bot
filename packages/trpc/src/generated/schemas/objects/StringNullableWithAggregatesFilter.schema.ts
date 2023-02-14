@@ -3,7 +3,7 @@ import { NestedStringNullableWithAggregatesFilterObjectSchema } from './NestedSt
 import { NestedIntNullableFilterObjectSchema } from './NestedIntNullableFilter.schema'
 import { NestedStringNullableFilterObjectSchema } from './NestedStringNullableFilter.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.StringNullableWithAggregatesFilter> = z
   .object({

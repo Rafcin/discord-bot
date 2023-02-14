@@ -4,7 +4,7 @@ import { AccessLevelCountOrderByAggregateInputObjectSchema } from './AccessLevel
 import { AccessLevelMaxOrderByAggregateInputObjectSchema } from './AccessLevelMaxOrderByAggregateInput.schema'
 import { AccessLevelMinOrderByAggregateInputObjectSchema } from './AccessLevelMinOrderByAggregateInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AccessLevelOrderByWithAggregationInput> = z
   .object({

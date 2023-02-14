@@ -8,7 +8,7 @@ import { AnswerUpdateWithWhereUniqueWithoutOwnerInputObjectSchema } from './Answ
 import { AnswerUpdateManyWithWhereWithoutOwnerInputObjectSchema } from './AnswerUpdateManyWithWhereWithoutOwnerInput.schema'
 import { AnswerScalarWhereInputObjectSchema } from './AnswerScalarWhereInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AnswerUncheckedUpdateManyWithoutOwnerNestedInput> =
   z

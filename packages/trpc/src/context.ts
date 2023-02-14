@@ -1,5 +1,5 @@
 import { Session } from 'next-auth'
-import { Prisma } from '@hey-amplify/prisma-client'
+import { prisma } from './prisma'
 import { inferAsyncReturnType, router, TRPCError } from '@trpc/server'
 import { CreateNextContextOptions } from '@trpc/server/adapters/next'
 
@@ -22,7 +22,7 @@ type CreateContextOptions = {
 export const createContextInner = async (opts: CreateContextOptions) => {
   return {
     session: opts.session,
-    Prisma,
+    prisma,
   }
 }
 

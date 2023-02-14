@@ -3,7 +3,7 @@ import { SessionScalarWhereInputObjectSchema } from './SessionScalarWhereInput.s
 import { SessionUpdateManyMutationInputObjectSchema } from './SessionUpdateManyMutationInput.schema'
 import { SessionUncheckedUpdateManyWithoutSessionsInputObjectSchema } from './SessionUncheckedUpdateManyWithoutSessionsInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.SessionUpdateManyWithWhereWithoutUserInput> = z
   .object({

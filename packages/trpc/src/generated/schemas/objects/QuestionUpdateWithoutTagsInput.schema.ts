@@ -8,7 +8,7 @@ import { GuildUpdateOneRequiredWithoutQuestionsNestedInputObjectSchema } from '.
 import { GitHubDiscussionUpdateOneWithoutQuestionNestedInputObjectSchema } from './GitHubDiscussionUpdateOneWithoutQuestionNestedInput.schema'
 import { ParticipationUpdateManyWithoutQuestionNestedInputObjectSchema } from './ParticipationUpdateManyWithoutQuestionNestedInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.QuestionUpdateWithoutTagsInput> = z
   .object({

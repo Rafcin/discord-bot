@@ -3,7 +3,7 @@ import { StringFieldUpdateOperationsInputObjectSchema } from './StringFieldUpdat
 import { NullableStringFieldUpdateOperationsInputObjectSchema } from './NullableStringFieldUpdateOperationsInput.schema'
 import { AccessLevelRoleUncheckedUpdateManyWithoutAccessLevelNestedInputObjectSchema } from './AccessLevelRoleUncheckedUpdateManyWithoutAccessLevelNestedInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AccessLevelUncheckedUpdateInput> = z
   .object({

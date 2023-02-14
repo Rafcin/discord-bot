@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { ParticipationQuestionIdParticipantIdCompoundUniqueInputObjectSchema } from './ParticipationQuestionIdParticipantIdCompoundUniqueInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.ParticipationWhereUniqueInput> = z
   .object({

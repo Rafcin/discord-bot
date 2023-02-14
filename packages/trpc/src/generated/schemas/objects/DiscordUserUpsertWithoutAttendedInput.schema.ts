@@ -4,7 +4,7 @@ import { DiscordUserUncheckedUpdateWithoutAttendedInputObjectSchema } from './Di
 import { DiscordUserCreateWithoutAttendedInputObjectSchema } from './DiscordUserCreateWithoutAttendedInput.schema'
 import { DiscordUserUncheckedCreateWithoutAttendedInputObjectSchema } from './DiscordUserUncheckedCreateWithoutAttendedInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordUserUpsertWithoutAttendedInput> = z
   .object({

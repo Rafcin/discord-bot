@@ -5,7 +5,7 @@ import { FeatureUncheckedUpdateWithoutTypeInputObjectSchema } from './FeatureUnc
 import { FeatureCreateWithoutTypeInputObjectSchema } from './FeatureCreateWithoutTypeInput.schema'
 import { FeatureUncheckedCreateWithoutTypeInputObjectSchema } from './FeatureUncheckedCreateWithoutTypeInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.FeatureUpsertWithWhereUniqueWithoutTypeInput> = z
   .object({

@@ -3,7 +3,7 @@ import { StringFilterObjectSchema } from './StringFilter.schema'
 import { StringNullableFilterObjectSchema } from './StringNullableFilter.schema'
 import { IntNullableFilterObjectSchema } from './IntNullableFilter.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AccountScalarWhereInput> = z
   .object({

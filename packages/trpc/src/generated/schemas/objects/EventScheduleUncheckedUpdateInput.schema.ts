@@ -3,7 +3,7 @@ import { StringFieldUpdateOperationsInputObjectSchema } from './StringFieldUpdat
 import { DateTimeFieldUpdateOperationsInputObjectSchema } from './DateTimeFieldUpdateOperationsInput.schema'
 import { DiscordEventUncheckedUpdateManyWithoutScheduleNestedInputObjectSchema } from './DiscordEventUncheckedUpdateManyWithoutScheduleNestedInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.EventScheduleUncheckedUpdateInput> = z
   .object({

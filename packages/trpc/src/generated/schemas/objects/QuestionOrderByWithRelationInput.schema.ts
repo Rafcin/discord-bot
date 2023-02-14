@@ -6,7 +6,7 @@ import { GitHubDiscussionOrderByWithRelationInputObjectSchema } from './GitHubDi
 import { ParticipationOrderByRelationAggregateInputObjectSchema } from './ParticipationOrderByRelationAggregateInput.schema'
 import { QuestionTagOrderByWithRelationInputObjectSchema } from './QuestionTagOrderByWithRelationInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.QuestionOrderByWithRelationInput> = z
   .object({

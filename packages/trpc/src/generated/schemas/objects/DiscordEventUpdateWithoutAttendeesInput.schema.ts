@@ -5,7 +5,7 @@ import { DateTimeFieldUpdateOperationsInputObjectSchema } from './DateTimeFieldU
 import { DiscordUserUpdateOneRequiredWithoutCreatedEventsNestedInputObjectSchema } from './DiscordUserUpdateOneRequiredWithoutCreatedEventsNestedInput.schema'
 import { EventScheduleUpdateOneWithoutEventNestedInputObjectSchema } from './EventScheduleUpdateOneWithoutEventNestedInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordEventUpdateWithoutAttendeesInput> = z
   .object({

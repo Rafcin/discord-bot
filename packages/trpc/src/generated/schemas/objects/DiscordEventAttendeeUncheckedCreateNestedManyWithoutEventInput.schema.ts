@@ -4,7 +4,7 @@ import { DiscordEventAttendeeUncheckedCreateWithoutEventInputObjectSchema } from
 import { DiscordEventAttendeeCreateOrConnectWithoutEventInputObjectSchema } from './DiscordEventAttendeeCreateOrConnectWithoutEventInput.schema'
 import { DiscordEventAttendeeWhereUniqueInputObjectSchema } from './DiscordEventAttendeeWhereUniqueInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordEventAttendeeUncheckedCreateNestedManyWithoutEventInput> =
   z

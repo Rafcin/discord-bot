@@ -3,7 +3,7 @@ import { ParticipationScalarWhereInputObjectSchema } from './ParticipationScalar
 import { ParticipationUpdateManyMutationInputObjectSchema } from './ParticipationUpdateManyMutationInput.schema'
 import { ParticipationUncheckedUpdateManyWithoutParticipationInputObjectSchema } from './ParticipationUncheckedUpdateManyWithoutParticipationInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.ParticipationUpdateManyWithWhereWithoutParticipantRolesInput> =
   z

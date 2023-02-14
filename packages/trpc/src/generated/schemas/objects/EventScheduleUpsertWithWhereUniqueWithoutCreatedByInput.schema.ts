@@ -5,7 +5,7 @@ import { EventScheduleUncheckedUpdateWithoutCreatedByInputObjectSchema } from '.
 import { EventScheduleCreateWithoutCreatedByInputObjectSchema } from './EventScheduleCreateWithoutCreatedByInput.schema'
 import { EventScheduleUncheckedCreateWithoutCreatedByInputObjectSchema } from './EventScheduleUncheckedCreateWithoutCreatedByInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.EventScheduleUpsertWithWhereUniqueWithoutCreatedByInput> =
   z

@@ -4,7 +4,7 @@ import { QuestionUncheckedUpdateWithoutAnswerInputObjectSchema } from './Questio
 import { QuestionCreateWithoutAnswerInputObjectSchema } from './QuestionCreateWithoutAnswerInput.schema'
 import { QuestionUncheckedCreateWithoutAnswerInputObjectSchema } from './QuestionUncheckedCreateWithoutAnswerInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.QuestionUpsertWithoutAnswerInput> = z
   .object({

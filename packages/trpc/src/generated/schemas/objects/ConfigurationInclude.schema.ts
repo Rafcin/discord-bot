@@ -4,7 +4,7 @@ import { GuildArgsObjectSchema } from './GuildArgs.schema'
 import { ConfigurationFeatureFindManySchema } from '../findManyConfigurationFeature.schema'
 import { ConfigurationCountOutputTypeArgsObjectSchema } from './ConfigurationCountOutputTypeArgs.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.ConfigurationInclude> = z
   .object({

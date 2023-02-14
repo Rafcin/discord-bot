@@ -6,7 +6,7 @@ import { ParticipationFindManySchema } from '../findManyParticipation.schema'
 import { QuestionTagArgsObjectSchema } from './QuestionTagArgs.schema'
 import { QuestionCountOutputTypeArgsObjectSchema } from './QuestionCountOutputTypeArgs.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.QuestionInclude> = z
   .object({

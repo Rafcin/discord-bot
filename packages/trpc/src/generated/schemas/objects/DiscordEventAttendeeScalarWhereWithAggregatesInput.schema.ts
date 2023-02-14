@@ -3,7 +3,7 @@ import { StringWithAggregatesFilterObjectSchema } from './StringWithAggregatesFi
 import { DateTimeWithAggregatesFilterObjectSchema } from './DateTimeWithAggregatesFilter.schema'
 import { IntWithAggregatesFilterObjectSchema } from './IntWithAggregatesFilter.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordEventAttendeeScalarWhereWithAggregatesInput> =
   z

@@ -7,7 +7,7 @@ import { UserWhereInputObjectSchema } from './UserWhereInput.schema'
 import { DiscordUserRelationFilterObjectSchema } from './DiscordUserRelationFilter.schema'
 import { DiscordUserWhereInputObjectSchema } from './DiscordUserWhereInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AccountWhereInput> = z
   .object({

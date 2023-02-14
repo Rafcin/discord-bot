@@ -7,7 +7,7 @@ import { FeatureWhereUniqueInputObjectSchema } from './FeatureWhereUniqueInput.s
 import { FeatureUpdateWithoutConfigurationsInputObjectSchema } from './FeatureUpdateWithoutConfigurationsInput.schema'
 import { FeatureUncheckedUpdateWithoutConfigurationsInputObjectSchema } from './FeatureUncheckedUpdateWithoutConfigurationsInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.FeatureUpdateOneRequiredWithoutConfigurationsNestedInput> =
   z

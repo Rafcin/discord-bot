@@ -3,7 +3,7 @@ import { NestedBoolWithAggregatesFilterObjectSchema } from './NestedBoolWithAggr
 import { NestedIntFilterObjectSchema } from './NestedIntFilter.schema'
 import { NestedBoolFilterObjectSchema } from './NestedBoolFilter.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.BoolWithAggregatesFilter> = z
   .object({

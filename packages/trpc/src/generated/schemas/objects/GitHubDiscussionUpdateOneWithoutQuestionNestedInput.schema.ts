@@ -7,7 +7,7 @@ import { GitHubDiscussionWhereUniqueInputObjectSchema } from './GitHubDiscussion
 import { GitHubDiscussionUpdateWithoutQuestionInputObjectSchema } from './GitHubDiscussionUpdateWithoutQuestionInput.schema'
 import { GitHubDiscussionUncheckedUpdateWithoutQuestionInputObjectSchema } from './GitHubDiscussionUncheckedUpdateWithoutQuestionInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.GitHubDiscussionUpdateOneWithoutQuestionNestedInput> =
   z

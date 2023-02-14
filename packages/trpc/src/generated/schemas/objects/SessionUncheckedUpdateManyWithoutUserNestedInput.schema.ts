@@ -8,7 +8,7 @@ import { SessionUpdateWithWhereUniqueWithoutUserInputObjectSchema } from './Sess
 import { SessionUpdateManyWithWhereWithoutUserInputObjectSchema } from './SessionUpdateManyWithWhereWithoutUserInput.schema'
 import { SessionScalarWhereInputObjectSchema } from './SessionScalarWhereInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.SessionUncheckedUpdateManyWithoutUserNestedInput> =
   z

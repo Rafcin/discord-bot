@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { DiscordUserSelectObjectSchema } from './DiscordUserSelect.schema'
 import { DiscordUserIncludeObjectSchema } from './DiscordUserInclude.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordUserArgs> = z
   .object({

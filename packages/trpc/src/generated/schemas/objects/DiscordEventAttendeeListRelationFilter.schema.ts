@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { DiscordEventAttendeeWhereInputObjectSchema } from './DiscordEventAttendeeWhereInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordEventAttendeeListRelationFilter> = z
   .object({

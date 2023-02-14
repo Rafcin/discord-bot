@@ -8,7 +8,7 @@ import { AccessLevelRoleUpdateWithWhereUniqueWithoutAccessLevelInputObjectSchema
 import { AccessLevelRoleUpdateManyWithWhereWithoutAccessLevelInputObjectSchema } from './AccessLevelRoleUpdateManyWithWhereWithoutAccessLevelInput.schema'
 import { AccessLevelRoleScalarWhereInputObjectSchema } from './AccessLevelRoleScalarWhereInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AccessLevelRoleUncheckedUpdateManyWithoutAccessLevelNestedInput> =
   z

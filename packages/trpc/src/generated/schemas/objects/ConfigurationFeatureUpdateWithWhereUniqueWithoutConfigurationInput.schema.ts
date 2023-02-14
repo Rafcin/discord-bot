@@ -3,7 +3,7 @@ import { ConfigurationFeatureWhereUniqueInputObjectSchema } from './Configuratio
 import { ConfigurationFeatureUpdateWithoutConfigurationInputObjectSchema } from './ConfigurationFeatureUpdateWithoutConfigurationInput.schema'
 import { ConfigurationFeatureUncheckedUpdateWithoutConfigurationInputObjectSchema } from './ConfigurationFeatureUncheckedUpdateWithoutConfigurationInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.ConfigurationFeatureUpdateWithWhereUniqueWithoutConfigurationInput> =
   z

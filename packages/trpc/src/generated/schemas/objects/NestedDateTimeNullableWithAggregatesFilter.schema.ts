@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { NestedIntNullableFilterObjectSchema } from './NestedIntNullableFilter.schema'
 import { NestedDateTimeNullableFilterObjectSchema } from './NestedDateTimeNullableFilter.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.NestedDateTimeNullableWithAggregatesFilter> = z
   .object({

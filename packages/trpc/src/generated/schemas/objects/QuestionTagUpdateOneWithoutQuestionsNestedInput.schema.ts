@@ -7,7 +7,7 @@ import { QuestionTagWhereUniqueInputObjectSchema } from './QuestionTagWhereUniqu
 import { QuestionTagUpdateWithoutQuestionsInputObjectSchema } from './QuestionTagUpdateWithoutQuestionsInput.schema'
 import { QuestionTagUncheckedUpdateWithoutQuestionsInputObjectSchema } from './QuestionTagUncheckedUpdateWithoutQuestionsInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.QuestionTagUpdateOneWithoutQuestionsNestedInput> =
   z

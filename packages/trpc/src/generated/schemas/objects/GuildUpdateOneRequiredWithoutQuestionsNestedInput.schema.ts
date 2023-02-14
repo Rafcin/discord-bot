@@ -7,7 +7,7 @@ import { GuildWhereUniqueInputObjectSchema } from './GuildWhereUniqueInput.schem
 import { GuildUpdateWithoutQuestionsInputObjectSchema } from './GuildUpdateWithoutQuestionsInput.schema'
 import { GuildUncheckedUpdateWithoutQuestionsInputObjectSchema } from './GuildUncheckedUpdateWithoutQuestionsInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.GuildUpdateOneRequiredWithoutQuestionsNestedInput> =
   z

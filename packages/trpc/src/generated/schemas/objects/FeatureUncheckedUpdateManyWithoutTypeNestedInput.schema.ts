@@ -8,7 +8,7 @@ import { FeatureUpdateWithWhereUniqueWithoutTypeInputObjectSchema } from './Feat
 import { FeatureUpdateManyWithWhereWithoutTypeInputObjectSchema } from './FeatureUpdateManyWithWhereWithoutTypeInput.schema'
 import { FeatureScalarWhereInputObjectSchema } from './FeatureScalarWhereInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.FeatureUncheckedUpdateManyWithoutTypeNestedInput> =
   z

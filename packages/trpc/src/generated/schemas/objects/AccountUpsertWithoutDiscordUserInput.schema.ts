@@ -4,7 +4,7 @@ import { AccountUncheckedUpdateWithoutDiscordUserInputObjectSchema } from './Acc
 import { AccountCreateWithoutDiscordUserInputObjectSchema } from './AccountCreateWithoutDiscordUserInput.schema'
 import { AccountUncheckedCreateWithoutDiscordUserInputObjectSchema } from './AccountUncheckedCreateWithoutDiscordUserInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AccountUpsertWithoutDiscordUserInput> = z
   .object({

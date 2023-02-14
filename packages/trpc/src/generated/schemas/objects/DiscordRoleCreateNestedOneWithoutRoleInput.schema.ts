@@ -4,7 +4,7 @@ import { DiscordRoleUncheckedCreateWithoutRoleInputObjectSchema } from './Discor
 import { DiscordRoleCreateOrConnectWithoutRoleInputObjectSchema } from './DiscordRoleCreateOrConnectWithoutRoleInput.schema'
 import { DiscordRoleWhereUniqueInputObjectSchema } from './DiscordRoleWhereUniqueInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordRoleCreateNestedOneWithoutRoleInput> = z
   .object({

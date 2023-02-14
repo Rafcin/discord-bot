@@ -3,7 +3,7 @@ import { EventScheduleScalarWhereInputObjectSchema } from './EventScheduleScalar
 import { EventScheduleUpdateManyMutationInputObjectSchema } from './EventScheduleUpdateManyMutationInput.schema'
 import { EventScheduleUncheckedUpdateManyWithoutEventScheduleInputObjectSchema } from './EventScheduleUncheckedUpdateManyWithoutEventScheduleInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.EventScheduleUpdateManyWithWhereWithoutGuildInput> =
   z

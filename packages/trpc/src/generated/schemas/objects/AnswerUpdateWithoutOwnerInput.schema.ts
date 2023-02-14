@@ -5,7 +5,7 @@ import { NullableStringFieldUpdateOperationsInputObjectSchema } from './Nullable
 import { QuestionUpdateOneRequiredWithoutAnswerNestedInputObjectSchema } from './QuestionUpdateOneRequiredWithoutAnswerNestedInput.schema'
 import { ParticipationUpdateOneRequiredWithoutAnswerNestedInputObjectSchema } from './ParticipationUpdateOneRequiredWithoutAnswerNestedInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AnswerUpdateWithoutOwnerInput> = z
   .object({

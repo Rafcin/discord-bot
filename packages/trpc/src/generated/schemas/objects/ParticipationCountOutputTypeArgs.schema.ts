@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { ParticipationCountOutputTypeSelectObjectSchema } from './ParticipationCountOutputTypeSelect.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.ParticipationCountOutputTypeArgs> = z
   .object({

@@ -3,7 +3,7 @@ import { StringFieldUpdateOperationsInputObjectSchema } from './StringFieldUpdat
 import { FeatureTypeUpdateOneRequiredWithoutFeaturesNestedInputObjectSchema } from './FeatureTypeUpdateOneRequiredWithoutFeaturesNestedInput.schema'
 import { FeatureInputsUpdateManyWithoutFeatureNestedInputObjectSchema } from './FeatureInputsUpdateManyWithoutFeatureNestedInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.FeatureUpdateWithoutConfigurationsInput> = z
   .object({

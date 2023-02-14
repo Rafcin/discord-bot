@@ -3,7 +3,7 @@ import { QuestionScalarWhereInputObjectSchema } from './QuestionScalarWhereInput
 import { QuestionUpdateManyMutationInputObjectSchema } from './QuestionUpdateManyMutationInput.schema'
 import { QuestionUncheckedUpdateManyWithoutQuestionsInputObjectSchema } from './QuestionUncheckedUpdateManyWithoutQuestionsInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.QuestionUpdateManyWithWhereWithoutGuildInput> = z
   .object({

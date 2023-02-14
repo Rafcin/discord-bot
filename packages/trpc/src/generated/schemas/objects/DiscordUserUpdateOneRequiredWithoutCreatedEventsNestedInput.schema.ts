@@ -7,7 +7,7 @@ import { DiscordUserWhereUniqueInputObjectSchema } from './DiscordUserWhereUniqu
 import { DiscordUserUpdateWithoutCreatedEventsInputObjectSchema } from './DiscordUserUpdateWithoutCreatedEventsInput.schema'
 import { DiscordUserUncheckedUpdateWithoutCreatedEventsInputObjectSchema } from './DiscordUserUncheckedUpdateWithoutCreatedEventsInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordUserUpdateOneRequiredWithoutCreatedEventsNestedInput> =
   z

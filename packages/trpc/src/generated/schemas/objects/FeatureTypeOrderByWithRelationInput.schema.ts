@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { SortOrderSchema } from '../enums/SortOrder.schema'
 import { FeatureOrderByRelationAggregateInputObjectSchema } from './FeatureOrderByRelationAggregateInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.FeatureTypeOrderByWithRelationInput> = z
   .object({

@@ -4,7 +4,7 @@ import { ParticipationCountOrderByAggregateInputObjectSchema } from './Participa
 import { ParticipationMaxOrderByAggregateInputObjectSchema } from './ParticipationMaxOrderByAggregateInput.schema'
 import { ParticipationMinOrderByAggregateInputObjectSchema } from './ParticipationMinOrderByAggregateInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.ParticipationOrderByWithAggregationInput> = z
   .object({

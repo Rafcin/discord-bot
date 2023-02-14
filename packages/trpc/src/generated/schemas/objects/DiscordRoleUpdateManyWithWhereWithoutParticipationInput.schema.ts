@@ -3,7 +3,7 @@ import { DiscordRoleScalarWhereInputObjectSchema } from './DiscordRoleScalarWher
 import { DiscordRoleUpdateManyMutationInputObjectSchema } from './DiscordRoleUpdateManyMutationInput.schema'
 import { DiscordRoleUncheckedUpdateManyWithoutParticipantRolesInputObjectSchema } from './DiscordRoleUncheckedUpdateManyWithoutParticipantRolesInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordRoleUpdateManyWithWhereWithoutParticipationInput> =
   z

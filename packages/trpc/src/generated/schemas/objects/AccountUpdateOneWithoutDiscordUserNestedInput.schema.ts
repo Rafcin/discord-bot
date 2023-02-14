@@ -7,7 +7,7 @@ import { AccountWhereUniqueInputObjectSchema } from './AccountWhereUniqueInput.s
 import { AccountUpdateWithoutDiscordUserInputObjectSchema } from './AccountUpdateWithoutDiscordUserInput.schema'
 import { AccountUncheckedUpdateWithoutDiscordUserInputObjectSchema } from './AccountUncheckedUpdateWithoutDiscordUserInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AccountUpdateOneWithoutDiscordUserNestedInput> =
   z

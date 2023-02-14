@@ -5,7 +5,7 @@ import { ParticipationUncheckedUpdateWithoutQuestionInputObjectSchema } from './
 import { ParticipationCreateWithoutQuestionInputObjectSchema } from './ParticipationCreateWithoutQuestionInput.schema'
 import { ParticipationUncheckedCreateWithoutQuestionInputObjectSchema } from './ParticipationUncheckedCreateWithoutQuestionInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.ParticipationUpsertWithWhereUniqueWithoutQuestionInput> =
   z

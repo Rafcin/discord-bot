@@ -4,7 +4,7 @@ import { FeatureTypeOrderByWithRelationInputObjectSchema } from './FeatureTypeOr
 import { ConfigurationFeatureOrderByRelationAggregateInputObjectSchema } from './ConfigurationFeatureOrderByRelationAggregateInput.schema'
 import { FeatureInputsOrderByRelationAggregateInputObjectSchema } from './FeatureInputsOrderByRelationAggregateInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.FeatureOrderByWithRelationInput> = z
   .object({

@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { FeatureCreateNestedManyWithoutTypeInputObjectSchema } from './FeatureCreateNestedManyWithoutTypeInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.FeatureTypeCreateInput> = z
   .object({

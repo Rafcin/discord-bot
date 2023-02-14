@@ -4,7 +4,7 @@ import { AccountUncheckedCreateWithoutUserInputObjectSchema } from './AccountUnc
 import { AccountCreateOrConnectWithoutUserInputObjectSchema } from './AccountCreateOrConnectWithoutUserInput.schema'
 import { AccountWhereUniqueInputObjectSchema } from './AccountWhereUniqueInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AccountUncheckedCreateNestedManyWithoutUserInput> =
   z

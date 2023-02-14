@@ -4,7 +4,7 @@ import { ConfigurationUpdateOneRequiredWithoutFeaturesNestedInputObjectSchema } 
 import { FeatureUpdateOneRequiredWithoutConfigurationsNestedInputObjectSchema } from './FeatureUpdateOneRequiredWithoutConfigurationsNestedInput.schema'
 import { BoolFieldUpdateOperationsInputObjectSchema } from './BoolFieldUpdateOperationsInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.ConfigurationFeatureUpdateInput> = z
   .object({

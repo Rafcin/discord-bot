@@ -3,7 +3,7 @@ import { ConfigurationFeatureScalarWhereInputObjectSchema } from './Configuratio
 import { ConfigurationFeatureUpdateManyMutationInputObjectSchema } from './ConfigurationFeatureUpdateManyMutationInput.schema'
 import { ConfigurationFeatureUncheckedUpdateManyWithoutConfigurationsInputObjectSchema } from './ConfigurationFeatureUncheckedUpdateManyWithoutConfigurationsInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.ConfigurationFeatureUpdateManyWithWhereWithoutFeatureInput> =
   z

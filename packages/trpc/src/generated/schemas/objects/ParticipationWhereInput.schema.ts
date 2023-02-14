@@ -8,7 +8,7 @@ import { DiscordRoleListRelationFilterObjectSchema } from './DiscordRoleListRela
 import { AnswerRelationFilterObjectSchema } from './AnswerRelationFilter.schema'
 import { AnswerWhereInputObjectSchema } from './AnswerWhereInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.ParticipationWhereInput> = z
   .object({

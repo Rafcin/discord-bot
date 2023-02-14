@@ -3,7 +3,7 @@ import { SortOrderSchema } from '../enums/SortOrder.schema'
 import { ParticipationOrderByRelationAggregateInputObjectSchema } from './ParticipationOrderByRelationAggregateInput.schema'
 import { AccessLevelRoleOrderByWithRelationInputObjectSchema } from './AccessLevelRoleOrderByWithRelationInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordRoleOrderByWithRelationInput> = z
   .object({

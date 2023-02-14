@@ -3,7 +3,7 @@ import { DiscordUserArgsObjectSchema } from './DiscordUserArgs.schema'
 import { QuestionArgsObjectSchema } from './QuestionArgs.schema'
 import { ParticipationArgsObjectSchema } from './ParticipationArgs.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AnswerInclude> = z
   .object({

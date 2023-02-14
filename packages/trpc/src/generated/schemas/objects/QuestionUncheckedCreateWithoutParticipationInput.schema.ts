@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { AnswerUncheckedCreateNestedOneWithoutQuestionInputObjectSchema } from './AnswerUncheckedCreateNestedOneWithoutQuestionInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.QuestionUncheckedCreateWithoutParticipationInput> =
   z

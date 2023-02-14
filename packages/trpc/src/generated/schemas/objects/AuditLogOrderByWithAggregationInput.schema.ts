@@ -4,7 +4,7 @@ import { AuditLogCountOrderByAggregateInputObjectSchema } from './AuditLogCountO
 import { AuditLogMaxOrderByAggregateInputObjectSchema } from './AuditLogMaxOrderByAggregateInput.schema'
 import { AuditLogMinOrderByAggregateInputObjectSchema } from './AuditLogMinOrderByAggregateInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AuditLogOrderByWithAggregationInput> = z
   .object({

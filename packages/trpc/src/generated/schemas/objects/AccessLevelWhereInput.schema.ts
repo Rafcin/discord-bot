@@ -3,7 +3,7 @@ import { StringFilterObjectSchema } from './StringFilter.schema'
 import { StringNullableFilterObjectSchema } from './StringNullableFilter.schema'
 import { AccessLevelRoleListRelationFilterObjectSchema } from './AccessLevelRoleListRelationFilter.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AccessLevelWhereInput> = z
   .object({

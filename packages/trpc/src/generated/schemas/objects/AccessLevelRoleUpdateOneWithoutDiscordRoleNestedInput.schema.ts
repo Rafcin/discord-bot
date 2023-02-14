@@ -7,7 +7,7 @@ import { AccessLevelRoleWhereUniqueInputObjectSchema } from './AccessLevelRoleWh
 import { AccessLevelRoleUpdateWithoutDiscordRoleInputObjectSchema } from './AccessLevelRoleUpdateWithoutDiscordRoleInput.schema'
 import { AccessLevelRoleUncheckedUpdateWithoutDiscordRoleInputObjectSchema } from './AccessLevelRoleUncheckedUpdateWithoutDiscordRoleInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AccessLevelRoleUpdateOneWithoutDiscordRoleNestedInput> =
   z

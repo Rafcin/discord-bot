@@ -4,7 +4,7 @@ import { QuestionTagUncheckedCreateWithoutQuestionsInputObjectSchema } from './Q
 import { QuestionTagCreateOrConnectWithoutQuestionsInputObjectSchema } from './QuestionTagCreateOrConnectWithoutQuestionsInput.schema'
 import { QuestionTagWhereUniqueInputObjectSchema } from './QuestionTagWhereUniqueInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.QuestionTagCreateNestedOneWithoutQuestionsInput> =
   z

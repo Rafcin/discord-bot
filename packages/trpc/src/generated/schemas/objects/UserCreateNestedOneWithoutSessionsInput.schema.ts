@@ -4,7 +4,7 @@ import { UserUncheckedCreateWithoutSessionsInputObjectSchema } from './UserUnche
 import { UserCreateOrConnectWithoutSessionsInputObjectSchema } from './UserCreateOrConnectWithoutSessionsInput.schema'
 import { UserWhereUniqueInputObjectSchema } from './UserWhereUniqueInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.UserCreateNestedOneWithoutSessionsInput> = z
   .object({

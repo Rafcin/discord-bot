@@ -4,7 +4,7 @@ import { ConfigurationUncheckedCreateWithoutGuildInputObjectSchema } from './Con
 import { ConfigurationCreateOrConnectWithoutGuildInputObjectSchema } from './ConfigurationCreateOrConnectWithoutGuildInput.schema'
 import { ConfigurationWhereUniqueInputObjectSchema } from './ConfigurationWhereUniqueInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.ConfigurationCreateNestedOneWithoutGuildInput> =
   z

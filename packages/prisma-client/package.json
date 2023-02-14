@@ -5,13 +5,13 @@
   "version": "1.0.0",
   "exports": {
     ".": {
-      "default": "./build/generated/client/index.js",
-      "types": "./build/generated/client/index.d.ts"
+      "default": "./build/index.js",
+      "types": "./build/index.d.ts"
     },
     "./package.json": "./package.json",
     "./schema.prisma": "./schema.prisma"
   },
-  "types": "./build/generated/client/index.d.ts",
+  "types": "./build/index.d.ts",
   "scripts": {
     "[--- Prisma ---]": "",
     "build": "prisma generate",

@@ -7,7 +7,7 @@ import { AnswerWhereUniqueInputObjectSchema } from './AnswerWhereUniqueInput.sch
 import { AnswerUpdateWithoutParticipationInputObjectSchema } from './AnswerUpdateWithoutParticipationInput.schema'
 import { AnswerUncheckedUpdateWithoutParticipationInputObjectSchema } from './AnswerUncheckedUpdateWithoutParticipationInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AnswerUpdateOneWithoutParticipationNestedInput> =
   z

@@ -8,7 +8,7 @@ import { ConfigurationFeatureUpdateWithWhereUniqueWithoutConfigurationInputObjec
 import { ConfigurationFeatureUpdateManyWithWhereWithoutConfigurationInputObjectSchema } from './ConfigurationFeatureUpdateManyWithWhereWithoutConfigurationInput.schema'
 import { ConfigurationFeatureScalarWhereInputObjectSchema } from './ConfigurationFeatureScalarWhereInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.ConfigurationFeatureUpdateManyWithoutConfigurationNestedInput> =
   z

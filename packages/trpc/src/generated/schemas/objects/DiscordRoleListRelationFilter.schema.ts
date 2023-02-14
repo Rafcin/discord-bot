@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { DiscordRoleWhereInputObjectSchema } from './DiscordRoleWhereInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordRoleListRelationFilter> = z
   .object({

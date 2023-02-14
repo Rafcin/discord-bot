@@ -4,7 +4,7 @@ import { DiscordEventUncheckedCreateWithoutCreatedByInputObjectSchema } from './
 import { DiscordEventCreateOrConnectWithoutCreatedByInputObjectSchema } from './DiscordEventCreateOrConnectWithoutCreatedByInput.schema'
 import { DiscordEventWhereUniqueInputObjectSchema } from './DiscordEventWhereUniqueInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordEventCreateNestedManyWithoutCreatedByInput> =
   z

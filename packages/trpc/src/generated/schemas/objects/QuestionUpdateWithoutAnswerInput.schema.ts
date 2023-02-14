@@ -8,7 +8,7 @@ import { GitHubDiscussionUpdateOneWithoutQuestionNestedInputObjectSchema } from 
 import { ParticipationUpdateManyWithoutQuestionNestedInputObjectSchema } from './ParticipationUpdateManyWithoutQuestionNestedInput.schema'
 import { QuestionTagUpdateOneWithoutQuestionsNestedInputObjectSchema } from './QuestionTagUpdateOneWithoutQuestionsNestedInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.QuestionUpdateWithoutAnswerInput> = z
   .object({

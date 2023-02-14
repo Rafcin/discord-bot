@@ -3,7 +3,7 @@ import { SessionWhereUniqueInputObjectSchema } from './SessionWhereUniqueInput.s
 import { SessionUpdateWithoutUserInputObjectSchema } from './SessionUpdateWithoutUserInput.schema'
 import { SessionUncheckedUpdateWithoutUserInputObjectSchema } from './SessionUncheckedUpdateWithoutUserInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.SessionUpdateWithWhereUniqueWithoutUserInput> = z
   .object({

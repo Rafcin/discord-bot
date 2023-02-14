@@ -3,7 +3,7 @@ import { QuestionWhereUniqueInputObjectSchema } from './QuestionWhereUniqueInput
 import { QuestionCreateWithoutAnswerInputObjectSchema } from './QuestionCreateWithoutAnswerInput.schema'
 import { QuestionUncheckedCreateWithoutAnswerInputObjectSchema } from './QuestionUncheckedCreateWithoutAnswerInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.QuestionCreateOrConnectWithoutAnswerInput> = z
   .object({

@@ -4,7 +4,7 @@ import { DateTimeFieldUpdateOperationsInputObjectSchema } from './DateTimeFieldU
 import { ConfigurationUncheckedUpdateOneWithoutGuildNestedInputObjectSchema } from './ConfigurationUncheckedUpdateOneWithoutGuildNestedInput.schema'
 import { EventScheduleUncheckedUpdateManyWithoutGuildNestedInputObjectSchema } from './EventScheduleUncheckedUpdateManyWithoutGuildNestedInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.GuildUncheckedUpdateWithoutQuestionsInput> = z
   .object({

@@ -3,7 +3,7 @@ import { AccessLevelWhereUniqueInputObjectSchema } from './AccessLevelWhereUniqu
 import { AccessLevelCreateWithoutRoleInputObjectSchema } from './AccessLevelCreateWithoutRoleInput.schema'
 import { AccessLevelUncheckedCreateWithoutRoleInputObjectSchema } from './AccessLevelUncheckedCreateWithoutRoleInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AccessLevelCreateOrConnectWithoutRoleInput> = z
   .object({

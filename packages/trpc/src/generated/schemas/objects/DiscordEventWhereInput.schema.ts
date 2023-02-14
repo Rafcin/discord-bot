@@ -8,7 +8,7 @@ import { EventScheduleRelationFilterObjectSchema } from './EventScheduleRelation
 import { EventScheduleWhereInputObjectSchema } from './EventScheduleWhereInput.schema'
 import { DiscordEventAttendeeListRelationFilterObjectSchema } from './DiscordEventAttendeeListRelationFilter.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordEventWhereInput> = z
   .object({

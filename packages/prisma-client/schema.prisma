@@ -3,7 +3,10 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "./build/generated/client"
+  // Unless you know all the Prisma engines you will need in advance, you will need a postinstall script that runs a fresh prisma generate.
+  // Generated output should just go into build.
+  // If we have extra logic we can create a index.js in build and then set the export path to /build/client. -Raf
+  output   = "./build"
 }
 
 datasource db {

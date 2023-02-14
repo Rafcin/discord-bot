@@ -3,7 +3,7 @@ import { StringFilterObjectSchema } from './StringFilter.schema'
 import { DateTimeFilterObjectSchema } from './DateTimeFilter.schema'
 import { IntFilterObjectSchema } from './IntFilter.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordEventAttendeeScalarWhereInput> = z
   .object({

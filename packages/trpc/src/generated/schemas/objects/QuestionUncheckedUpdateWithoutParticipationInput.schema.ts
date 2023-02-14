@@ -5,7 +5,7 @@ import { BoolFieldUpdateOperationsInputObjectSchema } from './BoolFieldUpdateOpe
 import { NullableStringFieldUpdateOperationsInputObjectSchema } from './NullableStringFieldUpdateOperationsInput.schema'
 import { AnswerUncheckedUpdateOneWithoutQuestionNestedInputObjectSchema } from './AnswerUncheckedUpdateOneWithoutQuestionNestedInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.QuestionUncheckedUpdateWithoutParticipationInput> =
   z

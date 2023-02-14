@@ -4,7 +4,7 @@ import { GuildCountOrderByAggregateInputObjectSchema } from './GuildCountOrderBy
 import { GuildMaxOrderByAggregateInputObjectSchema } from './GuildMaxOrderByAggregateInput.schema'
 import { GuildMinOrderByAggregateInputObjectSchema } from './GuildMinOrderByAggregateInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.GuildOrderByWithAggregationInput> = z
   .object({

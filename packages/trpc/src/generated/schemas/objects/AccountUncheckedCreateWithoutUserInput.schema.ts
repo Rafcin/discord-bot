@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { DiscordUserUncheckedCreateNestedOneWithoutAccountInputObjectSchema } from './DiscordUserUncheckedCreateNestedOneWithoutAccountInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AccountUncheckedCreateWithoutUserInput> = z
   .object({

@@ -8,7 +8,7 @@ import { DiscordEventUpdateWithWhereUniqueWithoutCreatedByInputObjectSchema } fr
 import { DiscordEventUpdateManyWithWhereWithoutCreatedByInputObjectSchema } from './DiscordEventUpdateManyWithWhereWithoutCreatedByInput.schema'
 import { DiscordEventScalarWhereInputObjectSchema } from './DiscordEventScalarWhereInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.DiscordEventUpdateManyWithoutCreatedByNestedInput> =
   z

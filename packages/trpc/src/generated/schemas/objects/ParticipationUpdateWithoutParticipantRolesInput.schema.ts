@@ -4,7 +4,7 @@ import { QuestionUpdateOneRequiredWithoutParticipationNestedInputObjectSchema } 
 import { DiscordUserUpdateOneRequiredWithoutParticipationsNestedInputObjectSchema } from './DiscordUserUpdateOneRequiredWithoutParticipationsNestedInput.schema'
 import { AnswerUpdateOneWithoutParticipationNestedInputObjectSchema } from './AnswerUpdateOneWithoutParticipationNestedInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.ParticipationUpdateWithoutParticipantRolesInput> =
   z

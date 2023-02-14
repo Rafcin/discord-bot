@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { AccountSelectObjectSchema } from './AccountSelect.schema'
 import { AccountIncludeObjectSchema } from './AccountInclude.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AccountArgs> = z
   .object({

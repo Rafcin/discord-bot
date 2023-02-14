@@ -4,7 +4,7 @@ import { DiscordUserOrderByWithRelationInputObjectSchema } from './DiscordUserOr
 import { QuestionOrderByWithRelationInputObjectSchema } from './QuestionOrderByWithRelationInput.schema'
 import { ParticipationOrderByWithRelationInputObjectSchema } from './ParticipationOrderByWithRelationInput.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AnswerOrderByWithRelationInput> = z
   .object({

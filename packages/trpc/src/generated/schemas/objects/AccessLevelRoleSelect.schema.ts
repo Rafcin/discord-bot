@@ -3,7 +3,7 @@ import { AccessLevelArgsObjectSchema } from './AccessLevelArgs.schema'
 import { ConfigurationArgsObjectSchema } from './ConfigurationArgs.schema'
 import { DiscordRoleArgsObjectSchema } from './DiscordRoleArgs.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.AccessLevelRoleSelect> = z
   .object({

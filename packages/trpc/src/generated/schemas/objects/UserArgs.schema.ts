@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { UserSelectObjectSchema } from './UserSelect.schema'
 import { UserIncludeObjectSchema } from './UserInclude.schema'
 
-import type { Prisma } from '../../../../../prisma-client/build/generated/client'
+import type { Prisma } from '../../../../../prisma-client/build'
 
 const Schema: z.ZodType<Prisma.UserArgs> = z
   .object({
